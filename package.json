@@ -1,0 +1,36 @@
+{
+  "name": "kassiopee-formation",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "next dev -p 3000",
+    "build": "next build",
+    "start": "next start -p 3000",
+    "lint": "next lint",
+    "check-images": "node scripts/check-images.js",
+    "deploy": "node scripts/deploy.js"
+  },
+  "dependencies": {
+    "next": "14.2.5",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "@next/mdx": "^15.5.3",
+    "lucide-react": "^0.468.0",
+    "rehype": "^13.0.2",
+    "remark": "^15.0.1",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.13",
+    "typescript": "^5.5.4",
+    "@types/node": "^20.14.12",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "eslint": "^9.9.0",
+    "eslint-config-next": "^14.2.5",
+    "@tailwindcss/forms": "^0.5.9",
+    "@tailwindcss/typography": "^0.5.15"
+  }
+}
