@@ -39,7 +39,7 @@ const navigation = [
       { name: 'RS6074 France Compétences', href: '/formations/transformation-digitale-tpe' },
       { name: 'ITIL V4 Foundation', href: '/formations/itil-v4-fondements' },
       { name: 'Scrum Master Certified', href: '/formations/scrum-master-agile' },
-      { name: 'Nos partenaires', href: '/#partenaires' },
+      { name: 'Toutes les certifications', href: '/certifications' },
     ],
   },
   {
@@ -47,9 +47,9 @@ const navigation = [
     href: '/a-propos',
     children: [
       { name: 'Qui sommes-nous', href: '/a-propos' },
-      { name: 'Notre expertise IT', href: '/a-propos#expertise' },
+      { name: 'Notre expertise IT', href: '/expertise-it' },
       { name: 'Nos résultats', href: '/nos-resultats' },
-      { name: 'Témoignages clients', href: '/#temoignages' },
+      { name: 'Recrutement', href: '/recrutement' },
     ],
   },
   {

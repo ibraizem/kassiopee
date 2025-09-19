@@ -17,25 +17,17 @@ interface FormData {
   telephone: string;
   message: string;
   formation_interest: string;
-  region: string;
-  centre_preference: string;
   consentement_rgpd: boolean;
 }
 
-const regions = [
-  'Île-de-France',
-  'PACA/AURA',
-  'Centre-Val de Loire/Nouvelle-Aquitaine',
-  'Hauts-de-France',
-];
-
-const centres = [
-  'Paris - République',
-  'Paris - Bastille',
-  'Lyon - Part-Dieu',
-  'Marseille - Vieux-Port',
-  'Lille - Centre',
-  'Orléans - Centre',
+const formations = [
+  'Transformation Digitale TPE',
+  'Gestion de Projets Informatiques',
+  'ITIL V4 Fondements',
+  'Scrum Master Agile',
+  'Kanban Gestion des Flux',
+  'Intelligence Artificielle',
+  'Autre formation',
 ];
 
 export default function ContactForm({
@@ -51,8 +43,6 @@ export default function ContactForm({
     telephone: '',
     message: '',
     formation_interest: formationInterest,
-    region: '',
-    centre_preference: '',
     consentement_rgpd: false,
   });
 
@@ -92,8 +82,6 @@ export default function ContactForm({
           telephone: '',
           message: '',
           formation_interest: formationInterest,
-          region: '',
-          centre_preference: '',
           consentement_rgpd: false,
         });
       } else {
@@ -218,59 +206,22 @@ export default function ContactForm({
           <label htmlFor="formation_interest" className="block text-sm font-medium text-gray-700 mb-2">
             Formation d'intérêt
           </label>
-          <input
-            type="text"
+          <select
             id="formation_interest"
             name="formation_interest"
             value={formData.formation_interest}
             onChange={handleInputChange}
             className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-kassiopee-lightblue focus:border-transparent transition-colors"
-            placeholder="Quelle formation vous intéresse ?"
-          />
+          >
+            <option value="">Sélectionnez une formation</option>
+            {formations.map((formation) => (
+              <option key={formation} value={formation}>
+                {formation}
+              </option>
+            ))}
+          </select>
         </div>
 
-        {/* Région et Centre */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div>
-            <label htmlFor="region" className="block text-sm font-medium text-gray-700 mb-2">
-              Région préférée
-            </label>
-            <select
-              id="region"
-              name="region"
-              value={formData.region}
-              onChange={handleInputChange}
-              className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-kassiopee-lightblue focus:border-transparent transition-colors"
-            >
-              <option value="">Sélectionnez une région</option>
-              {regions.map((region) => (
-                <option key={region} value={region}>
-                  {region}
-                </option>
-              ))}
-            </select>
-          </div>
-          
-          <div>
-            <label htmlFor="centre_preference" className="block text-sm font-medium text-gray-700 mb-2">
-              Centre de préférence
-            </label>
-            <select
-              id="centre_preference"
-              name="centre_preference"
-              value={formData.centre_preference}
-              onChange={handleInputChange}
-              className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-kassiopee-lightblue focus:border-transparent transition-colors"
-            >
-              <option value="">Sélectionnez un centre</option>
-              {centres.map((centre) => (
-                <option key={centre} value={centre}>
-                  {centre}
-                </option>
-              ))}
-            </select>
-          </div>
-        </div>
 
         {/* Message */}
         <div>

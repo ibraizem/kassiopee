@@ -53,7 +53,9 @@ export default function Footer() {
           {/* Company Info */}
           <div className="sm:col-span-2 lg:col-span-1">
             <div className="mb-6">
-              <Logo className="mb-4 filter brightness-0 invert" width={160} height={45} />
+              <div className="mb-4">
+                <Logo className="h-10 w-auto filter brightness-0 invert" width={160} height={40} />
+              </div>
               <p className="text-gray-300 text-sm leading-relaxed">
                 Organisme de formation professionnelle spécialisé dans l'informatique, 
                 la transformation digitale et les nouvelles technologies.
