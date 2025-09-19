@@ -20,11 +20,11 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://kassiopee-formation.fr'),
   title: {
-    default: "Kassiopée Formation - Formation professionnelle sanitaire, sociale et services",
+    default: "Kassiopée Formation - Formation professionnelle informatique et transformation digitale",
     template: "%s | Kassiopée Formation",
   },
-  description: "Organisme de formation professionnelle spécialisé dans les secteurs sanitaire, social et services à la personne. Plus de 25 ans d'expertise, 40 centres en France.",
-  keywords: "formation professionnelle, sanitaire, social, services à la personne, aide-soignant, auxiliaire de vie, certification QUALIOPI",
+  description: "Organisme de formation professionnelle spécialisé dans l'informatique, la transformation digitale et la gestion de projets IT. Formations certifiantes reconnues par France Compétences.",
+  keywords: "formation professionnelle, informatique, transformation digitale, gestion de projets IT, certification RS6074, ITIL, Scrum, Kanban, IA, QUALIOPI",
   authors: [{ name: "Kassiopée Formation" }],
   creator: "Kassiopée Formation",
   publisher: "Kassiopée Formation",
@@ -44,8 +44,8 @@ export const metadata: Metadata = {
     locale: 'fr_FR',
     url: process.env.NEXT_PUBLIC_SITE_URL,
     siteName: 'Kassiopée Formation',
-    title: 'Kassiopée Formation - Formation professionnelle sanitaire, sociale et services',
-    description: 'Organisme de formation professionnelle spécialisé dans les secteurs sanitaire, social et services à la personne.',
+    title: 'Kassiopée Formation - Formation professionnelle informatique et transformation digitale',
+    description: 'Organisme de formation professionnelle spécialisé dans l\'informatique, la transformation digitale et la gestion de projets IT.',
     images: [
       {
         url: '/images/og-default.jpg',

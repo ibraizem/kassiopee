@@ -8,42 +8,53 @@ import Logo from '@/components/ui/Logo';
 
 const navigation = [
   {
-    name: 'Nos formations',
+    name: 'Formations IT',
     href: '/formations',
     children: [
-      { name: 'Sanitaire & Social', href: '/formations/sanitaire-social' },
-      { name: 'Services à la personne', href: '/formations/services-personne' },
-      { name: 'Savoirs de base', href: '/formations/savoirs-base' },
-      { name: 'Catalogue complet', href: '/formations' },
+      { name: 'Transformation Digitale TPE', href: '/formations/transformation-digitale-tpe' },
+      { name: 'Gestion de Projets IT', href: '/formations/gestion-projets-informatiques' },
+      { name: 'ITIL V4 Fondements', href: '/formations/itil-v4-fondements' },
+      { name: 'Scrum Master Agile', href: '/formations/scrum-master-agile' },
+      { name: 'Kanban Gestion des Flux', href: '/formations/kanban-gestion-flux' },
+      { name: 'Intelligence Artificielle', href: '/formations/intelligence-artificielle' },
+      { name: 'Toutes les formations', href: '/formations' },
     ],
   },
   {
-    name: 'Nos régions',
-    href: '/regions',
+    name: 'Le Mag\' Kassiopée',
+    href: '/actualites',
     children: [
-      { name: 'Île-de-France', href: '/regions/ile-de-france' },
-      { name: 'PACA/AURA', href: '/regions/paca-aura' },
-      { name: 'Centre-Val de Loire', href: '/regions/centre-val-de-loire' },
-      { name: 'Hauts-de-France', href: '/regions/hauts-de-france' },
+      { name: 'Guide des Métiers', href: '/actualites?category=Guide+des+Métiers' },
+      { name: 'Conseils de Reconversion', href: '/actualites?category=Conseils+de+Reconversion' },
+      { name: 'Témoignages & Réussites', href: '/actualites?category=Témoignages+%26+Réussites' },
+      { name: 'Conseils Pédagogiques', href: '/actualites?category=Conseils+Pédagogiques' },
+      { name: 'Actualité des Secteurs', href: '/actualites?category=Actualité+des+Secteurs' },
+      { name: 'Tous les articles', href: '/actualites' },
     ],
   },
   {
-    name: 'Nos centres',
-    href: '/centres',
+    name: 'Certifications',
+    href: '/certifications',
+    children: [
+      { name: 'RS6074 France Compétences', href: '/formations/transformation-digitale-tpe' },
+      { name: 'ITIL V4 Foundation', href: '/formations/itil-v4-fondements' },
+      { name: 'Scrum Master Certified', href: '/formations/scrum-master-agile' },
+      { name: 'Nos partenaires', href: '/#partenaires' },
+    ],
   },
   {
     name: 'À propos',
     href: '/a-propos',
     children: [
       { name: 'Qui sommes-nous', href: '/a-propos' },
+      { name: 'Notre expertise IT', href: '/a-propos#expertise' },
       { name: 'Nos résultats', href: '/nos-resultats' },
-      { name: 'Ils parlent de nous', href: '/presse' },
-      { name: 'Partenaires engagés', href: '/partenaires' },
+      { name: 'Témoignages clients', href: '/#temoignages' },
     ],
   },
   {
-    name: 'Actualités',
-    href: '/actualites',
+    name: 'Contact',
+    href: '/contact',
   },
 ];
 
@@ -116,7 +127,7 @@ export default function Header() {
                   ) : (
                     <Link
                       href={item.href}
-                      className={`px-3 py-2 text-sm font-medium transition-colors ${
+                      className={`px-3 py-2 text-sm font-medium ${
                         pathname === item.href
                           ? 'text-kassiopee-navy border-b-2 border-kassiopee-gold'
                           : 'text-gray-700 hover:text-kassiopee-navy'
@@ -133,10 +144,10 @@ export default function Header() {
           {/* CTA Button */}
           <div className="hidden md:block">
             <Link
-              href="/inscription"
+              href="/contact"
               className="bg-kassiopee-navy text-white px-6 py-2 rounded-md font-semibold hover:bg-kassiopee-navy/90 transition-colors"
             >
-              M'INSCRIRE
+              NOUS CONTACTER
             </Link>
           </div>
 
@@ -206,11 +217,11 @@ export default function Header() {
               ))}
               <div className="mt-4 pt-4 border-t border-gray-200">
                 <Link
-                  href="/inscription"
+                  href="/contact"
                   className="block w-full text-center bg-kassiopee-navy text-white px-6 py-2 rounded-md font-semibold hover:bg-kassiopee-navy/90 transition-colors"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  M'INSCRIRE
+                  NOUS CONTACTER
                 </Link>
               </div>
             </div>

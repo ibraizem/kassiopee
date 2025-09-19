@@ -120,10 +120,10 @@ export default function ContactForm({
 
   if (success) {
     return (
-      <div className="bg-white rounded-xl shadow-lg p-8 text-center">
-        <CheckCircle className="h-16 w-16 text-green-500 mx-auto mb-4" />
-        <h3 className="text-2xl font-bold text-gray-900 mb-2">Message envoyé !</h3>
-        <p className="text-gray-600 mb-6">
+      <div className="bg-white rounded-xl shadow-lg p-4 sm:p-6 lg:p-8 text-center">
+        <CheckCircle className="h-12 w-12 sm:h-16 sm:w-16 text-green-500 mx-auto mb-4" />
+        <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">Message envoyé !</h3>
+        <p className="text-sm sm:text-base text-gray-600 mb-6">
           Merci pour votre message. Notre équipe vous recontactera dans les plus brefs délais.
         </p>
         <button
@@ -137,15 +137,15 @@ export default function ContactForm({
   }
 
   return (
-    <div className="bg-white rounded-xl shadow-lg p-8">
-      <div className="mb-6">
-        <h2 className="text-2xl font-bold text-gray-900 mb-2">{title}</h2>
-        <p className="text-gray-600">{subtitle}</p>
+    <div className="bg-white rounded-xl shadow-lg p-4 sm:p-6 lg:p-8">
+      <div className="mb-4 sm:mb-6">
+        <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">{title}</h2>
+        <p className="text-sm sm:text-base text-gray-600">{subtitle}</p>
       </div>
 
-      <form onSubmit={handleSubmit} className="space-y-6">
+      <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
         {/* Nom et Prénom */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <label htmlFor="nom" className="block text-sm font-medium text-gray-700 mb-2">
               Nom *

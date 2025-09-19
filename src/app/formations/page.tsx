@@ -7,116 +7,91 @@ import { generateSEO } from '@/lib/seo';
 
 const allFormations = [
   {
-    id: 'aide-soignant',
-    title: 'Formation Aide-Soignant (DEAS)',
-    description: 'Accompagnement complet vers le diplôme d\'aide-soignant. Formation théorique et pratique avec stages en établissements partenaires pour acquérir toutes les compétences nécessaires.',
-    image: 'https://images.pexels.com/photos/6749778/pexels-photo-6749778.jpeg',
-    duration: '10 mois',
-    region: 'Toutes régions',
-    category: 'Sanitaire & Social',
-    level: 'Niveau 4',
-    nextSession: 'Sept. 2024',
-    href: '/formations/aide-soignant'
+    id: 'transformation-digitale-tpe',
+    title: 'Transformation Digitale pour TPE (RS6074)',
+    description: 'Formation certifiante pour élaborer et piloter un plan d\'action de transformation digitale adapté à votre TPE. Certification reconnue par France Compétences.',
+    image: 'https://images.pexels.com/photos/3184306/pexels-photo-3184306.jpeg',
+    duration: '5 jours (28h)',
+    region: 'Région parisienne',
+    category: 'Transformation Digitale',
+    level: 'Dirigeants TPE',
+    nextSession: 'Sessions mensuelles',
+    href: '/formations/transformation-digitale-tpe'
   },
   {
-    id: 'auxiliaire-puericultrice',
-    title: 'Auxiliaire de Puériculture (DEAP)',
-    description: 'Formation complète aux soins et à l\'accompagnement du jeune enfant en maternité, PMI et structures d\'accueil. Stages pratiques inclus.',
-    image: 'https://images.pexels.com/photos/7551634/pexels-photo-7551634.jpeg',
-    duration: '10 mois',
-    region: 'Île-de-France',
-    category: 'Sanitaire & Social',
-    level: 'Niveau 4',
-    nextSession: 'Sept. 2024',
-    href: '/formations/auxiliaire-puericultrice'
+    id: 'gestion-projets-informatiques',
+    title: 'Fondamentaux de la Gestion de Projets Informatiques',
+    description: 'Maîtrisez les méthodologies de gestion de projet IT : cycle en V, Agile, Scrum, Kanban. Formation complète avec études de cas pratiques.',
+    image: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg',
+    duration: '4 jours (28h)',
+    region: 'Région parisienne',
+    category: 'Gestion de Projets IT',
+    level: 'Chefs de projet',
+    nextSession: 'Sessions bimensuelles',
+    href: '/formations/gestion-projets-informatiques'
   },
   {
-    id: 'auxiliaire-vie-sociale',
-    title: 'Auxiliaire de Vie Sociale (DEAVS)',
-    description: 'Devenez professionnel de l\'accompagnement à domicile. Formation complète aux gestes techniques et à la relation d\'aide auprès des personnes fragiles.',
-    image: 'https://images.pexels.com/photos/7551659/pexels-photo-7551659.jpeg',
-    duration: '9 mois',
-    region: 'Toutes régions',
-    category: 'Services à la personne',
-    level: 'Niveau 3',
-    nextSession: 'Oct. 2024',
-    href: '/formations/auxiliaire-vie-sociale'
+    id: 'itil-v4-fondements',
+    title: 'ITIL V4 - Fondements et Concepts Essentiels',
+    description: 'Formation aux fondements de la gestion des services selon ITIL V4. Préparation à la certification officielle avec études de cas.',
+    image: 'https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg',
+    duration: '3 jours (21h)',
+    region: 'Région parisienne',
+    category: 'ITIL & Services',
+    level: 'Professionnels IT',
+    nextSession: 'Sessions mensuelles',
+    href: '/formations/itil-v4-fondements'
   },
   {
-    id: 'accompagnant-educatif-social',
-    title: 'Accompagnant Éducatif et Social (DEAES)',
-    description: 'Formation aux métiers de l\'accompagnement en établissement ou à domicile. Développez vos compétences relationnelles et techniques.',
-    image: 'https://images.pexels.com/photos/7551667/pexels-photo-7551667.jpeg',
-    duration: '12 mois',
-    region: 'PACA/AURA',
-    category: 'Sanitaire & Social',
-    level: 'Niveau 3',
-    nextSession: 'Nov. 2024',
-    href: '/formations/accompagnant-educatif-social'
+    id: 'scrum-master-agile',
+    title: 'Le rôle et les missions du Scrum Master',
+    description: 'Formation spécialisée sur le rôle du Scrum Master dans une équipe Agile. Méthodologies, outils et bonnes pratiques.',
+    image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg',
+    duration: '3 jours (21h)',
+    region: 'Région parisienne',
+    category: 'Méthodes Agiles',
+    level: 'Scrum Masters',
+    nextSession: 'Sessions mensuelles',
+    href: '/formations/scrum-master-agile'
   },
   {
-    id: 'assistant-vie-dependance',
-    title: 'Assistant de Vie aux Familles',
-    description: 'Accompagnement des familles dans leur quotidien : entretien du domicile, garde d\'enfants, aide aux personnes âgées.',
-    image: 'https://images.pexels.com/photos/7551630/pexels-photo-7551630.jpeg',
-    duration: '6 mois',
-    region: 'Centre-Val de Loire',
-    category: 'Services à la personne',
-    level: 'Niveau 3',
-    nextSession: 'Déc. 2024',
-    href: '/formations/assistant-vie-dependance'
+    id: 'kanban-gestion-flux',
+    title: 'Mise en place d\'un système Kanban',
+    description: 'Formation pratique pour la gestion des flux de travail avec la méthode Kanban. Optimisation des processus et amélioration continue.',
+    image: 'https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg',
+    duration: '2 jours (14h)',
+    region: 'Région parisienne',
+    category: 'Méthodes Agiles',
+    level: 'Gestionnaires de projet',
+    nextSession: 'Sessions bimensuelles',
+    href: '/formations/kanban-gestion-flux'
   },
   {
-    id: 'agent-service-hospitalier',
-    title: 'Agent de Service Hospitalier',
-    description: 'Formation aux techniques d\'hygiène et de nettoyage en milieu hospitalier. Acquisition des gestes professionnels et des protocoles.',
-    image: 'https://images.pexels.com/photos/7551638/pexels-photo-7551638.jpeg',
-    duration: '4 mois',
-    region: 'Hauts-de-France',
-    category: 'Sanitaire & Social',
-    level: 'Niveau 3',
-    nextSession: 'Jan. 2025',
-    href: '/formations/agent-service-hospitalier'
-  },
-  {
-    id: 'savoirs-base-numerique',
-    title: 'Savoirs de Base et Numérique',
-    description: 'Remise à niveau en français, mathématiques et compétences numériques. Préparation aux concours et certifications.',
-    image: 'https://images.pexels.com/photos/5428836/pexels-photo-5428836.jpeg',
-    duration: '3 mois',
-    region: 'Toutes régions',
-    category: 'Savoirs de base',
-    level: 'Tous niveaux',
-    nextSession: 'Permanent',
-    href: '/formations/savoirs-base-numerique'
-  },
-  {
-    id: 'preparation-concours',
-    title: 'Préparation aux Concours',
-    description: 'Préparation intensive aux concours d\'entrée des formations sanitaires et sociales. Méthodologie, tests et entretiens.',
-    image: 'https://images.pexels.com/photos/5428007/pexels-photo-5428007.jpeg',
-    duration: '6 mois',
-    region: 'Toutes régions',
-    category: 'Savoirs de base',
-    level: 'Tous niveaux',
-    nextSession: 'Fév. 2025',
-    href: '/formations/preparation-concours'
-  },
+    id: 'intelligence-artificielle',
+    title: 'Formation en Intelligence Artificielle',
+    description: 'Introduction aux technologies d\'IA, machine learning et applications pratiques en entreprise. Formation adaptée aux besoins actuels.',
+    image: 'https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg',
+    duration: '5 jours (35h)',
+    region: 'Région parisienne',
+    category: 'Intelligence Artificielle',
+    level: 'Professionnels IT',
+    nextSession: 'Sessions trimestrielles',
+    href: '/formations/intelligence-artificielle'
+  }
 ];
 
 const categories = [
   'Toutes les catégories',
-  'Sanitaire & Social',
-  'Services à la personne',
-  'Savoirs de base'
+  'Transformation Digitale',
+  'Gestion de Projets IT',
+  'ITIL & Services',
+  'Méthodes Agiles',
+  'Intelligence Artificielle'
 ];
 
 const regions = [
   'Toutes les régions',
-  'Île-de-France',
-  'PACA/AURA',
-  'Centre-Val de Loire',
-  'Hauts-de-France'
+  'Région parisienne'
 ];
 
 export default function FormationsPage() {
@@ -149,8 +124,8 @@ export default function FormationsPage() {
               Nos <span className="text-kassiopee-gold">formations</span>
             </h1>
             <p className="text-xl text-gray-200 max-w-3xl mx-auto">
-              Découvrez toutes nos formations dans les secteurs sanitaire, social et services à la personne. 
-              Plus de 40 formations certifiantes pour développer vos compétences.
+              Découvrez toutes nos formations spécialisées en informatique, transformation digitale et gestion de projets IT. 
+              Formations certifiantes reconnues par France Compétences.
             </p>
           </div>
         </div>
@@ -254,9 +229,9 @@ export default function FormationsPage() {
             <div>
               <div className="flex items-center justify-center mb-4">
                 <Users className="h-8 w-8 text-kassiopee-gold mr-3" />
-                <span className="text-3xl font-bold">8 500+</span>
+                <span className="text-3xl font-bold">500+</span>
               </div>
-              <p className="text-gray-200">Apprenants formés par an</p>
+              <p className="text-gray-200">Professionnels IT formés</p>
             </div>
             
             <div>
@@ -264,15 +239,15 @@ export default function FormationsPage() {
                 <Clock className="h-8 w-8 text-kassiopee-gold mr-3" />
                 <span className="text-3xl font-bold">95%</span>
               </div>
-              <p className="text-gray-200">Taux de réussite aux examens</p>
+              <p className="text-gray-200">Taux de réussite aux certifications</p>
             </div>
             
             <div>
               <div className="flex items-center justify-center mb-4">
                 <MapPin className="h-8 w-8 text-kassiopee-gold mr-3" />
-                <span className="text-3xl font-bold">40+</span>
+                <span className="text-3xl font-bold">6</span>
               </div>
-              <p className="text-gray-200">Centres dans toute la France</p>
+              <p className="text-gray-200">Formations spécialisées disponibles</p>
             </div>
           </div>
         </div>

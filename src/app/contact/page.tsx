@@ -5,7 +5,7 @@ import { generateSEO } from '@/lib/seo';
 
 export const metadata = generateSEO({
   title: "Contact - Kassiopée Formation",
-  description: "Contactez Kassiopée Formation pour toute question sur nos formations et centres. Notre équipe vous accompagne dans votre projet de formation.",
+  description: "Contactez Kassiopée Formation pour toute question sur nos formations informatiques. Notre équipe vous accompagne dans votre projet de reconversion IT.",
   keywords: "contact, formation professionnelle, conseil, inscription, Kassiopée Formation",
 });
 
@@ -13,20 +13,20 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Téléphone",
-    content: "01 XX XX XX XX",
+    content: "07 65 67 63 41",
     description: "Du lundi au vendredi, 9h-18h"
   },
   {
     icon: Mail,
     title: "Email",
-    content: "contact@kassiopee-formation.fr",
+    content: "contact@kassiopee-formation.com",
     description: "Réponse sous 24h ouvrées"
   },
   {
     icon: MapPin,
-    title: "Siège social",
-    content: "15 rue de la Formation",
-    description: "75001 Paris, France"
+    title: "Centre de formation",
+    content: "Région parisienne",
+    description: "Formations sur site ou à distance"
   },
   {
     icon: Clock,
@@ -55,17 +55,17 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Info */}
-      <section className="py-16 bg-white">
+      <section className="py-12 sm:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {contactInfo.map((info, index) => (
               <div key={index} className="text-center">
-                <div className="bg-kassiopee-lightblue text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <info.icon className="h-8 w-8" />
+                <div className="bg-kassiopee-lightblue text-white rounded-full w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                  <info.icon className="h-6 w-6 sm:h-8 sm:w-8" />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">{info.title}</h3>
-                <p className="text-kassiopee-navy font-semibold mb-1">{info.content}</p>
-                <p className="text-sm text-gray-600">{info.description}</p>
+                <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">{info.title}</h3>
+                <p className="text-kassiopee-navy font-semibold mb-1 text-sm sm:text-base">{info.content}</p>
+                <p className="text-xs sm:text-sm text-gray-600">{info.description}</p>
               </div>
             ))}
           </div>
@@ -73,13 +73,13 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Form */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-12 sm:py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
               Envoyez-nous un <span className="text-kassiopee-navy">message</span>
             </h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-base sm:text-lg text-gray-600">
               Remplissez le formulaire ci-dessous et notre équipe vous recontactera rapidement.
             </p>
           </div>
@@ -93,23 +93,23 @@ export default function ContactPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 bg-white">
+      <section className="py-12 sm:py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
               Questions <span className="text-kassiopee-navy">fréquentes</span>
             </h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-base sm:text-lg text-gray-600">
               Retrouvez les réponses aux questions les plus courantes
             </p>
           </div>
 
-          <div className="space-y-6">
-            <div className="bg-gray-50 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+          <div className="space-y-4 sm:space-y-6">
+            <div className="bg-gray-50 rounded-lg p-4 sm:p-6">
+              <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">
                 Comment s'inscrire à une formation ?
               </h3>
-              <p className="text-gray-600">
+              <p className="text-sm sm:text-base text-gray-600">
                 Vous pouvez vous inscrire directement en ligne via notre formulaire d'inscription, 
                 ou nous contacter par téléphone pour un accompagnement personnalisé.
               </p>
@@ -120,8 +120,8 @@ export default function ContactPage() {
                 Quels sont les prérequis pour nos formations ?
               </h3>
               <p className="text-gray-600">
-                Les prérequis varient selon la formation. En général, un niveau 3ème est requis, 
-                mais nous proposons aussi des formations de remise à niveau.
+                Les prérequis varient selon la formation. Pour nos formations IT, une expérience professionnelle 
+                ou des bases en informatique sont recommandées.
               </p>
             </div>
 
