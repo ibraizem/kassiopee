@@ -300,11 +300,11 @@ export default function FormationEntretienEmbauche() {
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
             <Link
-              href="tel:0765676341"
+              href="tel:0743678768"
               className="border-2 border-kassiopee-navy text-kassiopee-navy px-8 py-4 rounded-lg font-semibold text-lg hover:bg-kassiopee-navy hover:text-white transition-colors inline-flex items-center justify-center"
             >
               <Phone className="mr-2 h-5 w-5" />
-              07 65 67 63 41
+              07 43 67 87 68
             </Link>
           </div>
 

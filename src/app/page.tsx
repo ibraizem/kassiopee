@@ -201,7 +201,7 @@ export default function HomePage() {
           text: "Nous contacter",
           href: "/contact"
         }}
-        backgroundImage="https://images.pexels.com/photos/3184306/pexels-photo-3184306.jpeg"
+        backgroundImage="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg"
       />
 
       {/* Stats Section */}

@@ -147,7 +147,7 @@ export default function Hero({
                   <div className="flex items-center justify-between">
                     <h3 className="text-white font-bold text-xl">Formations Disponibles</h3>
                     <div className="bg-kassiopee-gold text-kassiopee-navy px-3 py-1 rounded-full text-sm font-bold">
-                      5 formations
+                      7 formations
                     </div>
                   </div>
                   
@@ -157,8 +157,11 @@ export default function Hero({
                         { name: 'RNCP Négociateur Commercial', icon: Zap, progress: 95 },
                         { name: 'RNCP Assistant RH', icon: Shield, progress: 88 },
                         { name: 'Booster sa Candidature', icon: Code, progress: 92 },
+                        { name: 'Lettre de Motivation', icon: Code, progress: 94 },
+                        { name: 'Entretien d\'Embauche', icon: Code, progress: 91 },
+                        { name: 'Anglais Professionnel', icon: Shield, progress: 89 },
                         { name: 'Marketing Digital', icon: Cpu, progress: 90 }
-                      ].map((item, index) => (
+                      ].slice(0, 4).map((item, index) => (
                         <div key={index} className="flex items-center space-x-4">
                           <div className="bg-kassiopee-gold/20 p-2 rounded-lg">
                             <item.icon className="h-5 w-5 text-kassiopee-gold" />

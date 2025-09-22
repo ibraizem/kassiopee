@@ -8,6 +8,8 @@ const footerLinks = {
     { name: 'RNCP Négociateur Technico-Commercial', href: '/formations/formation-ntc' },
     { name: 'RNCP Assistant Ressources Humaines', href: '/formations/formation-arh' },
     { name: 'Booster sa Candidature (CV)', href: '/formations/formation-cv' },
+    { name: 'Lettre de Motivation Efficace', href: '/formations/formation-lettre-motivation' },
+    { name: 'Réussir son Entretien d\'Embauche', href: '/formations/formation-entretien-embauche' },
     { name: 'Anglais Professionnel', href: '/formations/formation-anglais' },
     { name: 'Marketing Digital', href: '/formations/formation-marketing' },
     { name: 'Toutes les formations', href: '/formations' },
@@ -82,7 +84,7 @@ export default function Footer() {
                 <div>
                   <p className="text-sm font-medium">Téléphone</p>
                   <p className="text-xs text-gray-300">
-                    07 65 67 63 41
+                    07 43 67 87 68
                   </p>
                 </div>
               </div>

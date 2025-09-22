@@ -13,7 +13,7 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Téléphone",
-    content: "07 65 67 63 41",
+    content: "07 43 67 87 68",
     description: "Du lundi au vendredi, 9h-18h"
   },
   {

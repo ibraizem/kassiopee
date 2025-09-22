@@ -194,7 +194,7 @@ export default function FinancementCPFPage() {
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-gray-200">Formations éligibles :</span>
-                    <span className="text-white font-semibold">5 formations</span>
+                    <span className="text-white font-semibold">7 formations</span>
                   </div>
                   <div className="bg-kassiopee-gold/20 rounded-lg p-4 mt-4">
                     <p className="text-sm text-white">

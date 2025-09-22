@@ -146,7 +146,7 @@ const chatResponses: Record<string, Message> = {
   'contact': {
     id: 'contact-response',
     type: 'bot',
-    content: 'Notre équipe est là pour vous accompagner gratuitement dans vos démarches !\n\n📞 Téléphone : 07 65 67 63 41\n📧 Email : direction@kassiopee-formation.com\n\nNous vous rappelons sous 24h pour étudier votre projet de formation et vous aider dans le financement.',
+    content: 'Notre équipe est là pour vous accompagner gratuitement dans vos démarches !\n\n📞 Téléphone : 07 43 67 87 68\n📧 Email : direction@kassiopee-formation.com\n\nNous vous rappelons sous 24h pour étudier votre projet de formation et vous aider dans le financement.',
     timestamp: new Date(),
     links: [
       { text: 'Formulaire de contact', url: '/contact' }
@@ -213,7 +213,7 @@ export default function ChatBot() {
     const botResponse: Message = {
       id: `bot-${Date.now()}`,
       type: 'bot',
-      content: 'Merci pour votre message ! Pour une réponse personnalisée, je vous invite à utiliser les options proposées ou à contacter directement notre équipe au 07 65 67 63 41.',
+      content: 'Merci pour votre message ! Pour une réponse personnalisée, je vous invite à utiliser les options proposées ou à contacter directement notre équipe au 07 43 67 87 68.',
       timestamp: new Date(),
       options: [
         { id: 'contact', text: 'Contacter l\'équipe', action: 'contact' },

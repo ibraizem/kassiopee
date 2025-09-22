@@ -98,7 +98,7 @@ export default function InscriptionPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-kassiopee-navy">
             <div className="bg-white/20 backdrop-blur-sm rounded-lg p-6">
               <h3 className="font-semibold text-lg mb-2">Par téléphone</h3>
-              <p className="text-xl font-bold">07 65 67 63 41</p>
+              <p className="text-xl font-bold">07 43 67 87 68</p>
               <p className="text-sm mt-2">Du lundi au vendredi, 9h-18h</p>
             </div>
             

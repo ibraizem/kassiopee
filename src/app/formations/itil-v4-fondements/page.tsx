@@ -319,7 +319,7 @@ export default function ItilV4FondementsPage() {
               <div className="space-y-4">
                 <div className="flex items-center">
                   <Phone className="h-6 w-6 text-kassiopee-gold mr-4" />
-                  <span className="text-gray-200">07 65 67 63 41</span>
+                  <span className="text-gray-200">07 43 67 87 68</span>
                 </div>
                 <div className="flex items-center">
                   <Mail className="h-6 w-6 text-kassiopee-gold mr-4" />
