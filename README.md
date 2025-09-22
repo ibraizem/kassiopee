@@ -1,6 +1,6 @@
 # Kassiopée Formation - Site Web Complet
 
-Site web moderne et complet pour Kassiopée Formation, organisme de formation professionnelle spécialisé dans les secteurs sanitaire, social et services à la personne.
+Site web moderne et complet pour Kassiopée Formation, organisme de formation professionnelle spécialisé dans les formations RNCP, développement personnel, langues et marketing digital.
 
 ## 🚀 Aperçu
 
@@ -117,12 +117,14 @@ src/
 ### SEO & Performance
 - ✅ Meta tags dynamiques
 - ✅ OpenGraph & Twitter Cards
-- ✅ JSON-LD (Organisation, LocalBusiness)
+- ✅ JSON-LD (Organisation, LocalBusiness, Course)
+- ✅ Données structurées schema.org pour formations
 - ✅ Sitemap.xml automatique
 - ✅ Robots.txt
 - ✅ Images optimisées (next/image)
 - ✅ Lazy loading
 - ✅ Core Web Vitals optimisés
+- ✅ Métadonnées spécifiques par formation avec codes RNCP
 
 ### Accessibilité
 - ✅ Navigation clavier
@@ -138,16 +140,53 @@ src/
 - ✅ Gestion des cookies
 - ✅ Validation côté client/serveur
 
+## 🎓 Catalogue de Formations (Mise à jour 2025-01-22)
+
+### Formations RNCP Certifiantes
+1. **RNCP NTC - Négociateur Technico-Commercial** (Code RNCP: 39063)
+   - Durée: 5 jours (35h)
+   - Public: Conseillers commerciaux, télévendeurs
+   - Compétences: Prospection, argumentation, closing, CRM
+   - URL: `/formations/formation-ntc`
+
+2. **RNCP ARH - Assistant Ressources Humaines** (Code RNCP: 35030)
+   - Durée: 5 jours (35h)
+   - Public: Assistant(e) RH, gestionnaire personnel
+   - Compétences: Administration personnel, recrutement, GPEC
+   - URL: `/formations/formation-arh`
+
+### Formations Développement Personnel
+3. **Booster sa Candidature - Un CV Qui Ouvre des Portes**
+   - Durée: 1 journée (6-7h)
+   - Public: Tout public
+   - Compétences: Rédaction CV, mise en page, stratégie candidature
+   - URL: `/formations/formation-cv`
+
+### Formations Langues
+4. **Anglais Professionnel - Niveau Opérationnel**
+   - Durée: 2 jours (14h)
+   - Public: Salariés, demandeurs d'emploi
+   - Compétences: Emails professionnels, téléphone, présentations
+   - URL: `/formations/formation-anglais`
+
+### Formations Marketing Digital
+5. **Marketing Digital - Réseaux Sociaux & Acquisition**
+   - Durée: 3 jours (21h)
+   - Public: Entrepreneurs, responsables marketing
+   - Compétences: Stratégie social media, contenu, campagnes pub
+   - URL: `/formations/formation-marketing`
+
 ## 📝 Pages Principales
 
 1. **Accueil** (`/`) - Hero, formations, régions, témoignages
-2. **Formations** (`/formations`) - Catalogue filtrable
-3. **Régions** (`/regions/*`) - Pages par région
-4. **Inscription** (`/inscription`) - Formulaire candidature
-5. **À propos** (`/a-propos`) - Histoire, équipe, valeurs
-6. **Contact** (`/contact`) - Coordonnées et formulaire
-7. **Centres** (`/centres`) - Liste des centres
-8. **Pages légales** - Mentions, CGU, confidentialité
+2. **Formations** (`/formations`) - Catalogue filtrable avec 5 formations professionnelles
+3. **Pages détaillées formations** - Pages complètes avec programme, objectifs, CTA
+4. **Régions** (`/regions/*`) - Pages par région
+5. **Inscription** (`/inscription`) - Formulaire candidature
+6. **À propos** (`/a-propos`) - Histoire, équipe, valeurs
+7. **Contact** (`/contact`) - Coordonnées et formulaire
+8. **Centres** (`/centres`) - Liste des centres
+9. **Pages légales** - Mentions, CGU, confidentialité
 
 ## 🔌 API Routes
 
@@ -187,10 +226,39 @@ vercel
 ```bash
 # Build settings
 Build command: npm run build
-Publish directory: out
+Publish directory: {{ ... }}
 
 # Ajouter les variables d'environnement dans l'interface Netlify
 ```
+
+## 🚀 Changements Récents (2025-01-22)
+
+### ✅ Transformation Complète du Catalogue de Formations
+- **Suppression** : Toutes les anciennes formations IT (Transformation Digitale, ITIL, Scrum, IA, etc.)
+- **Ajout** : 5 nouvelles formations professionnelles avec focus RNCP et développement personnel
+- **Navigation** : Mise à jour complète du menu header et des catégories
+- **SEO** : Optimisation avec données structurées schema.org/Course pour chaque formation
+- **CTA** : Boutons d'action vers FranceCompétences et MonCompteFormation
+- **Responsive** : Design mobile-first conservé avec optimisations tactiles
+
+### 📁 Fichiers Modifiés
+- `src/app/formations/page.tsx` - Page principale formations
+- `src/app/formations/layout.tsx` - Layout avec métadonnées SEO
+- `src/components/layout/Header.tsx` - Navigation mise à jour
+- `src/components/ui/FormationCard.tsx` - Support RNCP et CTA
+- `src/components/seo/StructuredData.tsx` - Nouveau composant données structurées
+- `src/app/formations/formation-ntc/page.tsx` - Page RNCP NTC
+- `src/app/formations/formation-arh/page.tsx` - Page RNCP ARH
+- `src/app/formations/formation-cv/page.tsx` - Page CV professionnel
+- `src/app/formations/formation-anglais/page.tsx` - Page anglais professionnel
+- `src/app/formations/formation-marketing/page.tsx` - Page marketing digital
+
+### 🔗 URLs des Nouvelles Pages
+- `/formations/formation-ntc` - RNCP Négociateur Technico-Commercial (39063)
+- `/formations/formation-arh` - RNCP Assistant Ressources Humaines (35030)
+- `/formations/formation-cv` - Booster sa Candidature
+- `/formations/formation-anglais` - Anglais Professionnel
+- `/formations/formation-marketing` - Marketing Digital
 
 ## 📋 TODO / Personnalisation
 
@@ -204,13 +272,12 @@ Publish directory: out
 2. **Contenu** :
    - ✅ Remplacer les images Pexels par vos vraies images
    - ✅ Personnaliser les témoignages
-   - ✅ Adapter les formations au catalogue réel
+   - ✅ Adapter les formations au catalogue réel (FAIT - 5 nouvelles formations)
    - ✅ Compléter les mentions légales
 
 3. **Analytics** :
    - ✅ Configurer Google Analytics
    - ✅ Ajouter Google Search Console
-   - ✅ Configurer les pixels de tracking (Facebook, etc.)
 
 4. **Base de données** :
    - ✅ Migrer vers PostgreSQL en production
