@@ -8,15 +8,14 @@ import Logo from '@/components/ui/Logo';
 
 const navigation = [
   {
-    name: 'Formations IT',
+    name: 'Formations',
     href: '/formations',
     children: [
-      { name: 'Transformation Digitale TPE', href: '/formations/transformation-digitale-tpe' },
-      { name: 'Gestion de Projets IT', href: '/formations/gestion-projets-informatiques' },
-      { name: 'ITIL V4 Fondements', href: '/formations/itil-v4-fondements' },
-      { name: 'Scrum Master Agile', href: '/formations/scrum-master-agile' },
-      { name: 'Kanban Gestion des Flux', href: '/formations/kanban-gestion-flux' },
-      { name: 'Intelligence Artificielle', href: '/formations/intelligence-artificielle' },
+      { name: 'RNCP Négociateur Technico-Commercial', href: '/formations/formation-ntc' },
+      { name: 'RNCP Assistant Ressources Humaines', href: '/formations/formation-arh' },
+      { name: 'Booster sa Candidature (CV)', href: '/formations/formation-cv' },
+      { name: 'Anglais Professionnel', href: '/formations/formation-anglais' },
+      { name: 'Marketing Digital', href: '/formations/formation-marketing' },
       { name: 'Toutes les formations', href: '/formations' },
     ],
   },
@@ -36,9 +35,9 @@ const navigation = [
     name: 'Certifications',
     href: '/certifications',
     children: [
-      { name: 'RS6074 France Compétences', href: '/formations/transformation-digitale-tpe' },
-      { name: 'ITIL V4 Foundation', href: '/formations/itil-v4-fondements' },
-      { name: 'Scrum Master Certified', href: '/formations/scrum-master-agile' },
+      { name: 'RNCP 39063 - Négociateur Technico-Commercial', href: '/formations/formation-ntc' },
+      { name: 'RNCP 35030 - Assistant Ressources Humaines', href: '/formations/formation-arh' },
+      { name: 'Formations éligibles CPF', href: '/formations' },
       { name: 'Toutes les certifications', href: '/certifications' },
     ],
   },

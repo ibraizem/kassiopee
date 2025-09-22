@@ -14,6 +14,8 @@ interface FormationCardProps {
   level: string;
   nextSession?: string;
   href: string;
+  rncp?: string;
+  isRNCP?: boolean;
 }
 
 export default function FormationCard({
@@ -27,6 +29,8 @@ export default function FormationCard({
   level,
   nextSession,
   href,
+  rncp,
+  isRNCP,
 }: FormationCardProps) {
   return (
     <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
@@ -80,15 +84,36 @@ export default function FormationCard({
           )}
         </div>
 
-        {/* CTA Button */}
-        <div className="pt-4 border-t border-gray-100">
+        {/* CTA Buttons */}
+        <div className="pt-4 border-t border-gray-100 space-y-3">
           <Link
             href={href}
-            className="inline-flex items-center text-kassiopee-navy font-semibold hover:text-kassiopee-lightblue transition-colors group"
+            className="inline-flex items-center text-kassiopee-navy font-semibold hover:text-kassiopee-lightblue transition-colors group w-full justify-center bg-gray-50 py-2 px-4 rounded-md"
           >
             Voir les détails
             <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
           </Link>
+          
+          <div className="flex flex-col sm:flex-row gap-2">
+            {isRNCP && rncp && (
+              <a
+                href={`https://www.francecompetences.fr/recherche/rncp/${rncp}/`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 bg-kassiopee-navy text-white text-center py-2 px-3 rounded-md text-sm font-medium hover:bg-kassiopee-navy/90 transition-colors"
+              >
+                Voir sur FranceCompétences
+              </a>
+            )}
+            <a
+              href="https://www.moncompteformation.gouv.fr"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 bg-kassiopee-gold text-kassiopee-navy text-center py-2 px-3 rounded-md text-sm font-medium hover:bg-kassiopee-gold/90 transition-colors"
+            >
+              Vérifier l'éligibilité CPF
+            </a>
+          </div>
         </div>
       </div>
     </div>

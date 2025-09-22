@@ -4,89 +4,85 @@ import React, { useState, useMemo } from 'react';
 import { Search, Filter, MapPin, Clock, Users } from 'lucide-react';
 import FormationCard from '@/components/ui/FormationCard';
 import { generateSEO } from '@/lib/seo';
+import { FormationListStructuredData } from '@/components/seo/StructuredData';
 
 const allFormations = [
   {
-    id: 'transformation-digitale-tpe',
-    title: 'Transformation Digitale pour TPE (RS6074)',
-    description: 'Formation certifiante pour élaborer et piloter un plan d\'action de transformation digitale adapté à votre TPE. Certification reconnue par France Compétences.',
+    id: 'formation-ntc',
+    title: 'RNCP NTC — Négociateur Technico-Commercial',
+    description: 'Maîtriser les compétences opérationnelles de prospection, découverte client, argumentation, traitement des objections, closing et fidélisation. Préparer au Titre professionnel « Négociateur Technico-Commercial », niveau 5.',
     image: 'https://images.pexels.com/photos/3184306/pexels-photo-3184306.jpeg',
-    duration: '5 jours (28h)',
-    region: 'Région parisienne',
-    category: 'Transformation Digitale',
-    level: 'Dirigeants TPE',
-    nextSession: 'Sessions mensuelles',
-    href: '/formations/transformation-digitale-tpe'
-  },
-  {
-    id: 'gestion-projets-informatiques',
-    title: 'Fondamentaux de la Gestion de Projets Informatiques',
-    description: 'Maîtrisez les méthodologies de gestion de projet IT : cycle en V, Agile, Scrum, Kanban. Formation complète avec études de cas pratiques.',
-    image: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg',
-    duration: '4 jours (28h)',
-    region: 'Région parisienne',
-    category: 'Gestion de Projets IT',
-    level: 'Chefs de projet',
-    nextSession: 'Sessions bimensuelles',
-    href: '/formations/gestion-projets-informatiques'
-  },
-  {
-    id: 'itil-v4-fondements',
-    title: 'ITIL V4 - Fondements et Concepts Essentiels',
-    description: 'Formation aux fondements de la gestion des services selon ITIL V4. Préparation à la certification officielle avec études de cas.',
-    image: 'https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg',
-    duration: '3 jours (21h)',
-    region: 'Région parisienne',
-    category: 'ITIL & Services',
-    level: 'Professionnels IT',
-    nextSession: 'Sessions mensuelles',
-    href: '/formations/itil-v4-fondements'
-  },
-  {
-    id: 'scrum-master-agile',
-    title: 'Le rôle et les missions du Scrum Master',
-    description: 'Formation spécialisée sur le rôle du Scrum Master dans une équipe Agile. Méthodologies, outils et bonnes pratiques.',
-    image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg',
-    duration: '3 jours (21h)',
-    region: 'Région parisienne',
-    category: 'Méthodes Agiles',
-    level: 'Scrum Masters',
-    nextSession: 'Sessions mensuelles',
-    href: '/formations/scrum-master-agile'
-  },
-  {
-    id: 'kanban-gestion-flux',
-    title: 'Mise en place d\'un système Kanban',
-    description: 'Formation pratique pour la gestion des flux de travail avec la méthode Kanban. Optimisation des processus et amélioration continue.',
-    image: 'https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg',
-    duration: '2 jours (14h)',
-    region: 'Région parisienne',
-    category: 'Méthodes Agiles',
-    level: 'Gestionnaires de projet',
-    nextSession: 'Sessions bimensuelles',
-    href: '/formations/kanban-gestion-flux'
-  },
-  {
-    id: 'intelligence-artificielle',
-    title: 'Formation en Intelligence Artificielle',
-    description: 'Introduction aux technologies d\'IA, machine learning et applications pratiques en entreprise. Formation adaptée aux besoins actuels.',
-    image: 'https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg',
     duration: '5 jours (35h)',
     region: 'Région parisienne',
-    category: 'Intelligence Artificielle',
-    level: 'Professionnels IT',
-    nextSession: 'Sessions trimestrielles',
-    href: '/formations/intelligence-artificielle'
+    category: 'RNCP Commercial',
+    level: 'Conseillers commerciaux',
+    nextSession: 'Sessions mensuelles',
+    href: '/formations/formation-ntc',
+    rncp: '39063',
+    isRNCP: true
+  },
+  {
+    id: 'formation-arh',
+    title: 'RNCP ARH — Assistant Ressources Humaines',
+    description: 'Acquérir les compétences nécessaires à l\'administration du personnel, au recrutement, à l\'intégration et au suivi des compétences. Préparer au Titre professionnel « Assistant Ressources Humaines ».',
+    image: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg',
+    duration: '5 jours (35h)',
+    region: 'Région parisienne',
+    category: 'RNCP RH',
+    level: 'Assistant(e) RH',
+    nextSession: 'Sessions mensuelles',
+    href: '/formations/formation-arh',
+    rncp: '35030',
+    isRNCP: true
+  },
+  {
+    id: 'formation-cv',
+    title: 'Booster sa Candidature — Un CV Qui Ouvre des Portes',
+    description: 'Permettre de rédiger un CV clair, professionnel et personnalisé, capable d\'attirer l\'attention d\'un recruteur et d\'augmenter le taux de convocation en entretien.',
+    image: 'https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg',
+    duration: '1 journée (6-7h)',
+    region: 'Région parisienne',
+    category: 'Développement Personnel',
+    level: 'Tout public',
+    nextSession: 'Sessions hebdomadaires',
+    href: '/formations/formation-cv',
+    isRNCP: false
+  },
+  {
+    id: 'formation-anglais',
+    title: 'Anglais Professionnel — Niveau Opérationnel',
+    description: 'Gagner en aisance dans les échanges professionnels courants (emails, téléphone, présentations simples) et acquérir un vocabulaire métier opérationnel.',
+    image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg',
+    duration: '2 jours (14h)',
+    region: 'Région parisienne',
+    category: 'Langues',
+    level: 'Tout niveau',
+    nextSession: 'Sessions bimensuelles',
+    href: '/formations/formation-anglais',
+    isRNCP: false
+  },
+  {
+    id: 'formation-marketing',
+    title: 'Marketing Digital — Réseaux Sociaux & Acquisition',
+    description: 'Définir une stratégie social media, produire du contenu engageant et lancer des campagnes d\'acquisition basiques (Facebook/Instagram/LinkedIn).',
+    image: 'https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg',
+    duration: '3 jours (21h)',
+    region: 'Région parisienne',
+    category: 'Marketing Digital',
+    level: 'Entrepreneurs, responsables marketing',
+    nextSession: 'Sessions mensuelles',
+    href: '/formations/formation-marketing',
+    isRNCP: false
   }
 ];
 
 const categories = [
   'Toutes les catégories',
-  'Transformation Digitale',
-  'Gestion de Projets IT',
-  'ITIL & Services',
-  'Méthodes Agiles',
-  'Intelligence Artificielle'
+  'RNCP Commercial',
+  'RNCP RH',
+  'Développement Personnel',
+  'Langues',
+  'Marketing Digital'
 ];
 
 const regions = [
@@ -115,7 +111,9 @@ export default function FormationsPage() {
   }, [searchTerm, selectedCategory, selectedRegion]);
 
   return (
-    <div className="min-h-screen bg-gray-50 pt-16">
+    <>
+      <FormationListStructuredData formations={allFormations} />
+      <div className="min-h-screen bg-gray-50 pt-16">
       {/* Header */}
       <section className="bg-kassiopee-navy text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -124,8 +122,8 @@ export default function FormationsPage() {
               Nos <span className="text-kassiopee-gold">formations</span>
             </h1>
             <p className="text-xl text-gray-200 max-w-3xl mx-auto">
-              Découvrez toutes nos formations spécialisées en informatique, transformation digitale et gestion de projets IT. 
-              Formations certifiantes reconnues par France Compétences.
+              Découvrez nos formations professionnelles : RNCP Négociateur Technico-Commercial, Assistant RH, 
+              développement personnel, anglais professionnel et marketing digital. Formations certifiantes et éligibles CPF.
             </p>
           </div>
         </div>
@@ -231,7 +229,7 @@ export default function FormationsPage() {
                 <Users className="h-8 w-8 text-kassiopee-gold mr-3" />
                 <span className="text-3xl font-bold">500+</span>
               </div>
-              <p className="text-gray-200">Professionnels IT formés</p>
+              <p className="text-gray-200">Professionnels formés</p>
             </div>
             
             <div>
@@ -245,13 +243,14 @@ export default function FormationsPage() {
             <div>
               <div className="flex items-center justify-center mb-4">
                 <MapPin className="h-8 w-8 text-kassiopee-gold mr-3" />
-                <span className="text-3xl font-bold">6</span>
+                <span className="text-3xl font-bold">5</span>
               </div>
-              <p className="text-gray-200">Formations spécialisées disponibles</p>
+              <p className="text-gray-200">Formations professionnelles disponibles</p>
             </div>
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 }
