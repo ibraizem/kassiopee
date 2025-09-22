@@ -18,104 +18,104 @@ import {
 import { generateSEO } from '@/lib/seo';
 
 export const metadata = generateSEO({
-  title: 'Notre Expertise IT - Kassiopée Formation',
-  description: 'Découvrez l\'expertise IT de Kassiopée Formation : transformation digitale, gestion de projets informatiques, ITIL, Scrum, IA et plus encore.',
-  keywords: 'expertise IT, transformation digitale, formation informatique, ITIL, Scrum, intelligence artificielle, gestion projets IT',
+  title: 'Notre Expertise Formation - Kassiopée Formation',
+  description: 'Découvrez l\'expertise de Kassiopée Formation : formations RNCP, développement personnel, anglais professionnel, marketing digital et accompagnement personnalisé.',
+  keywords: 'expertise formation, RNCP, développement personnel, anglais professionnel, marketing digital, formation professionnelle, CPF',
   ogImage: 'https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg',
 });
 
 const expertises = [
   {
-    icon: Code,
-    title: 'Développement & Technologies',
-    description: 'Maîtrise des dernières technologies et méthodologies de développement pour accompagner vos projets digitaux.',
+    icon: Award,
+    title: 'Formations RNCP Certifiantes',
+    description: 'Expertise dans les formations RNCP pour obtenir des certifications reconnues par l\'État.',
     competences: [
-      'Langages de programmation modernes',
-      'Frameworks et librairies actuels',
-      'Architecture logicielle',
-      'DevOps et CI/CD'
-    ]
-  },
-  {
-    icon: Database,
-    title: 'Gestion de Données',
-    description: 'Expertise en bases de données, Big Data et intelligence artificielle pour optimiser vos processus métier.',
-    competences: [
-      'Bases de données relationnelles et NoSQL',
-      'Data Analytics et Business Intelligence',
-      'Machine Learning et IA',
-      'Gouvernance des données'
-    ]
-  },
-  {
-    icon: Cloud,
-    title: 'Cloud & Infrastructure',
-    description: 'Accompagnement dans la migration et l\'optimisation de vos infrastructures cloud.',
-    competences: [
-      'AWS, Azure, Google Cloud Platform',
-      'Architecture cloud native',
-      'Conteneurisation (Docker, Kubernetes)',
-      'Sécurité cloud'
-    ]
-  },
-  {
-    icon: Shield,
-    title: 'Cybersécurité',
-    description: 'Protection de vos systèmes d\'information avec les meilleures pratiques de sécurité.',
-    competences: [
-      'Audit de sécurité',
-      'Gestion des risques cyber',
-      'Conformité RGPD',
-      'Formation sensibilisation sécurité'
-    ]
-  },
-  {
-    icon: Zap,
-    title: 'Transformation Digitale',
-    description: 'Stratégie et mise en œuvre de votre transformation digitale pour rester compétitif.',
-    competences: [
-      'Diagnostic digital',
-      'Stratégie de transformation',
-      'Conduite du changement',
-      'ROI et mesure de performance'
+      'RNCP Négociateur Technico-Commercial',
+      'RNCP Assistant Ressources Humaines',
+      'Accompagnement certification',
+      'Suivi post-formation'
     ]
   },
   {
     icon: Users,
-    title: 'Gestion de Projets IT',
-    description: 'Méthodologies agiles et traditionnelles pour mener vos projets informatiques au succès.',
+    title: 'Développement Personnel',
+    description: 'Accompagnement personnalisé pour développer vos compétences professionnelles et personnelles.',
     competences: [
-      'Scrum, Kanban, SAFe',
-      'Cycle en V, PRINCE2',
-      'Gestion des risques projets',
-      'Leadership d\'équipes techniques'
+      'Optimisation CV et candidature',
+      'Techniques de recherche d\'emploi',
+      'Confiance en soi',
+      'Communication professionnelle'
+    ]
+  },
+  {
+    icon: TrendingUp,
+    title: 'Marketing Digital',
+    description: 'Maîtrise des outils et stratégies marketing digital pour développer votre activité.',
+    competences: [
+      'Stratégie réseaux sociaux',
+      'Création de contenu engageant',
+      'Campagnes publicitaires',
+      'Analyse de performance'
+    ]
+  },
+  {
+    icon: Target,
+    title: 'Techniques Commerciales',
+    description: 'Développement des compétences commerciales pour exceller dans la vente et la négociation.',
+    competences: [
+      'Prospection efficace',
+      'Techniques d\'argumentation',
+      'Gestion des objections',
+      'Closing et fidélisation'
+    ]
+  },
+  {
+    icon: Lightbulb,
+    title: 'Langues Professionnelles',
+    description: 'Formation en langues étrangères adaptées au contexte professionnel.',
+    competences: [
+      'Anglais des affaires',
+      'Communication écrite professionnelle',
+      'Présentations orales',
+      'Vocabulaire métier spécialisé'
+    ]
+  },
+  {
+    icon: CheckCircle,
+    title: 'Accompagnement RH',
+    description: 'Expertise en gestion des ressources humaines pour optimiser la gestion du personnel.',
+    competences: [
+      'Administration du personnel',
+      'Processus de recrutement',
+      'Gestion des compétences',
+      'Droit social et paie'
     ]
   }
 ];
 
 const certifications = [
   {
-    name: 'ITIL V4 Foundation',
-    description: 'Gestion des services informatiques selon les meilleures pratiques ITIL',
-    logo: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg'
+    name: 'RNCP 39063 - Négociateur Technico-Commercial',
+    description: 'Certification reconnue par l\'\u00c9tat pour les compétences commerciales',
+    logo: 'https://images.pexels.com/photos/3184306/pexels-photo-3184306.jpeg'
   },
   {
-    name: 'Scrum Alliance',
-    description: 'Méthodologies agiles et certification Scrum Master',
+    name: 'RNCP 35030 - Assistant Ressources Humaines',
+    description: 'Titre professionnel pour l\'administration du personnel et RH',
     logo: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg'
   },
   {
-    name: 'France Compétences RS6074',
-    description: 'Certification officielle transformation digitale TPE',
+    name: 'Formations Éligibles CPF',
+    description: 'Toutes nos formations sont finançables via le Compte Personnel de Formation',
     logo: 'https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg'
   }
 ];
 
 const stats = [
-  { number: '500+', label: 'Professionnels formés' },
-  { number: '15+', label: 'Années d\'expérience' },
-  { number: '95%', label: 'Taux de satisfaction' },
-  { number: '50+', label: 'Entreprises partenaires' }
+  { number: '500+', label: 'Diplômes délivrés' },
+  { number: '5', label: 'Formations disponibles' },
+  { number: '95%', label: 'Taux de réussite' },
+  { number: '10+', label: 'Années d\'expertise' }
 ];
 
 const methodologie = [
@@ -151,11 +151,11 @@ export default function ExpertiseITPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
-                Notre Expertise IT
+                Notre Expertise Formation
               </h1>
               <p className="text-lg sm:text-xl text-gray-200 mb-6 sm:mb-8 leading-relaxed">
-                Kassiopée Formation s'appuie sur une expertise technique approfondie et une 
-                connaissance fine des enjeux digitaux pour vous accompagner dans votre transformation.
+                Kassiopée Formation s'appuie sur une expertise pédagogique approfondie et une 
+                connaissance fine des enjeux professionnels pour vous accompagner dans votre développement de compétences.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
@@ -211,7 +211,7 @@ export default function ExpertiseITPage() {
               Nos Domaines d'Expertise
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-              Une expertise technique complète pour répondre à tous vos besoins de formation IT
+              Une expertise pédagogique complète pour répondre à tous vos besoins de formation professionnelle
             </p>
           </div>
 
@@ -253,7 +253,7 @@ export default function ExpertiseITPage() {
               Notre Méthodologie
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-              Une approche structurée pour garantir l'efficacité de vos formations
+              Une approche personnalisée pour garantir votre réussite professionnelle
             </p>
           </div>
 
@@ -323,10 +323,10 @@ export default function ExpertiseITPage() {
       <section className="py-12 sm:py-16 lg:py-20 bg-kassiopee-navy text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6">
-            Prêt à développer vos compétences IT ?
+            Prêt à développer vos compétences professionnelles ?
           </h2>
           <p className="text-lg sm:text-xl text-gray-200 mb-6 sm:mb-8 max-w-3xl mx-auto">
-            Découvrez nos formations spécialisées et donnez un nouvel élan à votre carrière dans l'IT
+            Découvrez nos formations certifiantes et donnez un nouvel élan à votre carrière professionnelle
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

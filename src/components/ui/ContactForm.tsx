@@ -21,12 +21,11 @@ interface FormData {
 }
 
 const formations = [
-  'Transformation Digitale TPE',
-  'Gestion de Projets Informatiques',
-  'ITIL V4 Fondements',
-  'Scrum Master Agile',
-  'Kanban Gestion des Flux',
-  'Intelligence Artificielle',
+  'RNCP Négociateur Technico-Commercial',
+  'RNCP Assistant Ressources Humaines',
+  'Booster sa Candidature (CV)',
+  'Anglais Professionnel',
+  'Marketing Digital',
   'Autre formation',
 ];
 
@@ -125,7 +124,7 @@ export default function ContactForm({
   }
 
   return (
-    <div className="bg-white rounded-xl shadow-lg p-4 sm:p-6 lg:p-8">
+    <div className="bg-white rounded-2xl shadow-xl p-6 sm:p-8 lg:p-10 border border-gray-100">
       <div className="mb-4 sm:mb-6">
         <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">{title}</h2>
         <p className="text-sm sm:text-base text-gray-600">{subtitle}</p>
@@ -145,7 +144,7 @@ export default function ContactForm({
               required
               value={formData.nom}
               onChange={handleInputChange}
-              className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-kassiopee-lightblue focus:border-transparent transition-colors"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-kassiopee-lightblue focus:border-transparent transition-all duration-200 hover:border-kassiopee-lightblue"
               placeholder="Votre nom"
             />
           </div>
@@ -161,7 +160,7 @@ export default function ContactForm({
               required
               value={formData.prenom}
               onChange={handleInputChange}
-              className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-kassiopee-lightblue focus:border-transparent transition-colors"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-kassiopee-lightblue focus:border-transparent transition-all duration-200 hover:border-kassiopee-lightblue"
               placeholder="Votre prénom"
             />
           </div>
@@ -180,7 +179,7 @@ export default function ContactForm({
               required
               value={formData.email}
               onChange={handleInputChange}
-              className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-kassiopee-lightblue focus:border-transparent transition-colors"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-kassiopee-lightblue focus:border-transparent transition-all duration-200 hover:border-kassiopee-lightblue"
               placeholder="votre.email@exemple.fr"
             />
           </div>
@@ -195,7 +194,7 @@ export default function ContactForm({
               name="telephone"
               value={formData.telephone}
               onChange={handleInputChange}
-              className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-kassiopee-lightblue focus:border-transparent transition-colors"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-kassiopee-lightblue focus:border-transparent transition-all duration-200 hover:border-kassiopee-lightblue"
               placeholder="01 23 45 67 89"
             />
           </div>
@@ -275,7 +274,7 @@ export default function ContactForm({
         <button
           type="submit"
           disabled={loading}
-          className="w-full bg-kassiopee-navy text-white px-6 py-3 rounded-md font-semibold hover:bg-kassiopee-navy/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+          className="w-full bg-gradient-to-r from-kassiopee-navy to-kassiopee-lightblue text-white px-6 py-4 rounded-lg font-semibold hover:from-kassiopee-navy/90 hover:to-kassiopee-lightblue/90 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
         >
           {loading ? (
             <>

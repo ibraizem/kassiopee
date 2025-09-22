@@ -5,8 +5,8 @@ import { generateSEO } from '@/lib/seo';
 
 export const metadata = generateSEO({
   title: "Recrutement - Rejoignez l'équipe Kassiopée Formation",
-  description: "Rejoignez Kassiopée Formation et participez à la transformation digitale. Découvrez nos offres d'emploi et notre culture d'entreprise.",
-  keywords: "recrutement, emploi, carrière, formation informatique, équipe, culture entreprise",
+  description: "Rejoignez Kassiopée Formation et participez au développement des compétences professionnelles. Découvrez nos offres d'emploi et notre culture d'entreprise.",
+  keywords: "recrutement, emploi, carrière, formation professionnelle, RNCP, équipe, culture entreprise",
 });
 
 const valeurs = [
@@ -38,42 +38,42 @@ const valeurs = [
 
 const offresEmploi = [
   {
-    poste: "Formateur/Formatrice ITIL V4",
+    poste: "Formateur/Formatrice RNCP Commercial",
     type: "CDI",
     lieu: "Région parisienne",
     experience: "5+ ans",
-    description: "Nous recherchons un formateur expert en ITIL V4 pour animer nos formations certifiantes.",
-    competences: ["ITIL V4 Expert", "Pédagogie", "Certification officielle", "Anglais technique"],
+    description: "Nous recherchons un formateur expert en techniques commerciales pour animer nos formations RNCP Négociateur Technico-Commercial.",
+    competences: ["Expérience commerciale", "Pédagogie", "RNCP ou équivalent", "Techniques de vente"],
     salaire: "45-55K€",
     urgent: true
   },
   {
-    poste: "Formateur/Formatrice Scrum & Agile",
+    poste: "Formateur/Formatrice RH",
     type: "CDI",
     lieu: "Région parisienne / Remote",
     experience: "3+ ans",
-    description: "Rejoignez notre équipe pour former les futurs Scrum Masters et Product Owners.",
-    competences: ["Scrum Master Certified", "Coaching Agile", "Animation d'équipe", "Outils Agile"],
+    description: "Rejoignez notre équipe pour former les futurs Assistants Ressources Humaines.",
+    competences: ["Expérience RH", "Administration personnel", "Droit social", "Pédagogie"],
     salaire: "42-50K€",
     urgent: false
   },
   {
-    poste: "Responsable Pédagogique IT",
+    poste: "Responsable Pédagogique",
     type: "CDI",
     lieu: "Région parisienne",
     experience: "7+ ans",
-    description: "Pilotez le développement de nos programmes de formation informatique.",
-    competences: ["Management", "Ingénierie pédagogique", "IT", "Gestion de projet"],
+    description: "Pilotez le développement de nos programmes de formation professionnelle et RNCP.",
+    competences: ["Management", "Ingénierie pédagogique", "RNCP", "Gestion de projet"],
     salaire: "55-65K€",
     urgent: false
   },
   {
-    poste: "Commercial B2B - Formations IT",
+    poste: "Commercial B2B - Formations Professionnelles",
     type: "CDI",
     lieu: "Région parisienne",
     experience: "3+ ans",
-    description: "Développez notre portefeuille clients entreprises en formations informatiques.",
-    competences: ["Vente B2B", "Connaissance IT", "Prospection", "Négociation"],
+    description: "Développez notre portefeuille clients entreprises en formations professionnelles et RNCP.",
+    competences: ["Vente B2B", "Connaissance formations", "Prospection", "CPF"],
     salaire: "40-50K€ + variable",
     urgent: false
   }
@@ -140,7 +140,7 @@ export default function RecrutementPage() {
               Rejoignez l'équipe <span className="text-kassiopee-gold">Kassiopée</span>
             </h1>
             <p className="text-xl text-gray-200 max-w-3xl mx-auto mb-8">
-              Participez à la transformation digitale en formant les professionnels de demain. 
+              Participez au développement des compétences professionnelles en formant les talents de demain. 
               Rejoignez une équipe passionnée dans un secteur en pleine croissance.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -234,7 +234,7 @@ export default function RecrutementPage() {
                   <div className="lg:ml-8 lg:text-right">
                     <div className="text-2xl font-bold text-kassiopee-gold mb-4">{offre.salaire}</div>
                     <Link
-                      href={`mailto:recrutement@kassiopee-formation.com?subject=Candidature ${offre.poste}`}
+                      href={`mailto:direction@kassiopee-formation.com?subject=Candidature ${offre.poste}`}
                       className="bg-kassiopee-navy text-white px-6 py-3 rounded-lg font-semibold hover:bg-kassiopee-navy/90 transition-colors inline-flex items-center"
                     >
                       <Send className="h-4 w-4 mr-2" />
@@ -330,15 +330,15 @@ export default function RecrutementPage() {
                 <ul className="space-y-3">
                   <li className="flex items-center">
                     <CheckCircle className="h-5 w-5 text-kassiopee-gold mr-3" />
-                    <span>Formateurs experts IT</span>
+                    <span>Formateurs experts RNCP</span>
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="h-5 w-5 text-kassiopee-gold mr-3" />
-                    <span>Ingénieurs pédagogiques</span>
+                    <span>Formateurs en développement personnel</span>
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="h-5 w-5 text-kassiopee-gold mr-3" />
-                    <span>Commerciaux B2B</span>
+                    <span>Commerciaux B2B formations</span>
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="h-5 w-5 text-kassiopee-gold mr-3" />
@@ -346,7 +346,7 @@ export default function RecrutementPage() {
                   </li>
                   <li className="flex items-center">
                     <CheckCircle className="h-5 w-5 text-kassiopee-gold mr-3" />
-                    <span>Consultants en transformation digitale</span>
+                    <span>Consultants en accompagnement professionnel</span>
                   </li>
                 </ul>
               </div>
@@ -358,7 +358,7 @@ export default function RecrutementPage() {
                     <Mail className="h-5 w-5 text-kassiopee-gold mr-3 mt-1" />
                     <div>
                       <p className="font-semibold">Email :</p>
-                      <p className="text-gray-200">recrutement@kassiopee-formation.com</p>
+                      <p className="text-gray-200">direction@kassiopee-formation.com</p>
                     </div>
                   </div>
                   <div className="flex items-start">
@@ -371,7 +371,7 @@ export default function RecrutementPage() {
                 </div>
                 
                 <Link
-                  href="mailto:recrutement@kassiopee-formation.com?subject=Candidature spontanée"
+                  href="mailto:direction@kassiopee-formation.com?subject=Candidature spontanée"
                   className="bg-kassiopee-gold text-kassiopee-navy px-6 py-3 rounded-lg font-bold hover:bg-yellow-400 transition-colors inline-flex items-center mt-6"
                 >
                   <Send className="h-4 w-4 mr-2" />

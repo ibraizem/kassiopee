@@ -19,7 +19,7 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    content: "contact@kassiopee-formation.com",
+    content: "direction@kassiopee-formation.com",
     description: "Réponse sous 24h ouvrées"
   },
   {

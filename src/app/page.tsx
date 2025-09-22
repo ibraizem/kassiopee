@@ -4,160 +4,159 @@ import Link from 'next/link';
 import { ArrowRight, MapPin, Users, Award, CheckCircle } from 'lucide-react';
 import Hero from '@/components/ui/Hero';
 import FormationCard from '@/components/ui/FormationCard';
+import FAQSection from '@/components/ui/FAQSection';
 import { generateSEO } from '@/lib/seo';
 
 export const metadata = generateSEO({
-  title: "Accueil - Formation professionnelle informatique et transformation digitale",
-  description: "Kassiopée Formation : organisme de formation professionnelle spécialisé dans l'informatique, la gestion de projets IT et la transformation digitale. Formations certifiantes reconnues par France Compétences.",
-  keywords: "formation professionnelle, informatique, transformation digitale, gestion de projets IT, certification RS6074, ITIL, Scrum, Kanban, IA",
+  title: "Accueil - Formations Professionnelles RNCP, CV, Anglais, Marketing Digital",
+  description: "Kassiopée Formation : organisme de formation professionnelle spécialisé dans les formations RNCP (Négociateur Technico-Commercial, Assistant RH), développement personnel, anglais professionnel et marketing digital. Formations certifiantes éligibles CPF.",
+  keywords: "formation professionnelle, RNCP, négociateur technico-commercial, assistant RH, CV, anglais professionnel, marketing digital, CPF, certification",
 });
 
 const featuredFormations = [
   {
-    id: 'transformation-digitale-tpe',
-    title: 'Transformation Digitale pour TPE',
-    description: 'Formation certifiante RS6074 pour élaborer et piloter un plan d\'action de transformation digitale adapté à votre TPE. Certification reconnue par France Compétences.',
+    id: 'formation-ntc',
+    title: 'RNCP NTC — Négociateur Technico-Commercial',
+    description: 'Maîtriser les compétences opérationnelles de prospection, découverte client, argumentation, traitement des objections, closing et fidélisation. Préparer au Titre professionnel « Négociateur Technico-Commercial », niveau 5.',
     image: 'https://images.pexels.com/photos/3184306/pexels-photo-3184306.jpeg',
-    duration: '5 jours (28h)',
+    duration: '5 jours (35h)',
     region: 'Région parisienne',
-    category: 'Transformation Digitale',
-    level: 'Dirigeants TPE',
+    category: 'RNCP Commercial',
+    level: 'Conseillers commerciaux',
     nextSession: 'Sessions mensuelles',
-    href: '/formations/transformation-digitale-tpe'
+    href: '/formations/formation-ntc',
+    rncp: '39063',
+    isRNCP: true
   },
   {
-    id: 'gestion-projets-informatiques',
-    title: 'Gestion de Projets Informatiques',
-    description: 'Maîtrisez les méthodologies de gestion de projet IT : Agile, Scrum, Kanban. Formation complète avec études de cas pratiques.',
+    id: 'formation-arh',
+    title: 'RNCP ARH — Assistant Ressources Humaines',
+    description: 'Acquérir les compétences nécessaires à l\'administration du personnel, au recrutement, à l\'intégration et au suivi des compétences. Préparer au Titre professionnel « Assistant Ressources Humaines ».',
     image: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg',
-    duration: '4 jours (28h)',
+    duration: '5 jours (35h)',
     region: 'Région parisienne',
-    category: 'Gestion de Projets IT',
-    level: 'Chefs de projet',
-    nextSession: 'Sessions bimensuelles',
-    href: '/formations/gestion-projets-informatiques'
+    category: 'RNCP RH',
+    level: 'Assistant(e) RH',
+    nextSession: 'Sessions mensuelles',
+    href: '/formations/formation-arh',
+    rncp: '35030',
+    isRNCP: true
   },
   {
-    id: 'itil-v4-fondements',
-    title: 'ITIL V4 - Fondements et Concepts',
-    description: 'Formation aux fondements de la gestion des services selon ITIL V4. Préparation à la certification officielle.',
-    image: 'https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg',
+    id: 'formation-marketing',
+    title: 'Marketing Digital — Réseaux Sociaux & Acquisition',
+    description: 'Définir une stratégie social media, produire du contenu engageant et lancer des campagnes d\'acquisition basiques (Facebook/Instagram/LinkedIn).',
+    image: 'https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg',
     duration: '3 jours (21h)',
     region: 'Région parisienne',
-    category: 'ITIL & Services',
-    level: 'Professionnels IT',
+    category: 'Marketing Digital',
+    level: 'Entrepreneurs, responsables marketing',
     nextSession: 'Sessions mensuelles',
-    href: '/formations/itil-v4-fondements'
+    href: '/formations/formation-marketing',
+    isRNCP: false
   }
 ];
 
 const stats = [
-  { number: '95%', label: 'Taux de réussite aux certifications' },
-  { number: '500+', label: 'Professionnels IT formés' },
-  { number: '1', label: 'Centre spécialisé région parisienne' },
-  { number: '10+', label: 'Années d\'expertise IT' },
+  { number: '500+', label: 'Diplômés' },
+  { number: '5', label: 'Formations' },
+  { number: '95%', label: 'Taux de réussite' },
+  { number: '10+', label: 'Ans d\'expertise' },
 ];
 
-const technologiesCertifications = [
+const domainesFormation = [
   {
-    categorie: 'Transformation Digitale',
-    technologies: ['Digital Strategy', 'E-commerce', 'Marketing Digital', 'Analytics'],
-    certifications: ['RS6074 France Compétences', 'Certification Digitale'],
-    niveau: 'Dirigeants & Managers',
+    categorie: 'RNCP Commercial',
+    competences: ['Prospection', 'Argumentation', 'Closing', 'CRM'],
+    certifications: ['RNCP 39063 - Négociateur Technico-Commercial'],
+    niveau: 'Conseillers commerciaux',
     duree: '5 jours',
-    icon: '🚀'
+    icon: '💼'
   },
   {
-    categorie: 'Méthodologies Agiles',
-    technologies: ['Scrum', 'Kanban', 'Lean', 'Design Thinking'],
-    certifications: ['Scrum Master Certified', 'Kanban Practitioner'],
-    niveau: 'Chefs de projet',
-    duree: '2-4 jours',
-    icon: '⚡'
+    categorie: 'RNCP Ressources Humaines',
+    competences: ['Administration personnel', 'Recrutement', 'GPEC', 'Droit social'],
+    certifications: ['RNCP 35030 - Assistant Ressources Humaines'],
+    niveau: 'Assistant(e) RH',
+    duree: '5 jours',
+    icon: '👥'
   },
   {
-    categorie: 'ITIL & Gouvernance',
-    technologies: ['ITIL V4', 'Service Management', 'COBIT', 'DevOps'],
-    certifications: ['ITIL V4 Foundation', 'Service Management'],
-    niveau: 'Professionnels IT',
+    categorie: 'Développement Personnel',
+    competences: ['Rédaction CV', 'Mise en page', 'Stratégie candidature', 'Personal branding'],
+    certifications: ['Certification développement personnel'],
+    niveau: 'Tout public',
+    duree: '1 jour',
+    icon: '📝'
+  },
+  {
+    categorie: 'Langues Professionnelles',
+    competences: ['Emails professionnels', 'Téléphone', 'Présentations', 'Vocabulaire métier'],
+    certifications: ['Certification anglais professionnel'],
+    niveau: 'Salariés, demandeurs d\'emploi',
+    duree: '2 jours',
+    icon: '🌍'
+  },
+  {
+    categorie: 'Marketing Digital',
+    competences: ['Stratégie social media', 'Contenu engageant', 'Campagnes pub', 'Analytics'],
+    certifications: ['Certification marketing digital'],
+    niveau: 'Entrepreneurs, responsables marketing',
     duree: '3 jours',
-    icon: '🛠️'
-  },
-  {
-    categorie: 'Intelligence Artificielle',
-    technologies: ['Machine Learning', 'Deep Learning', 'NLP', 'Computer Vision'],
-    certifications: ['AI Fundamentals', 'ML Practitioner'],
-    niveau: 'Développeurs & Data',
-    duree: '5 jours',
-    icon: '🤖'
-  },
-  {
-    categorie: 'Cloud & Infrastructure',
-    technologies: ['AWS', 'Azure', 'Docker', 'Kubernetes'],
-    certifications: ['Cloud Practitioner', 'DevOps Engineer'],
-    niveau: 'Administrateurs',
-    duree: '3-5 jours',
-    icon: '☁️'
-  },
-  {
-    categorie: 'Cybersécurité',
-    technologies: ['Ethical Hacking', 'SIEM', 'Forensics', 'Risk Management'],
-    certifications: ['Security+', 'Ethical Hacker'],
-    niveau: 'Experts Sécurité',
-    duree: '4-6 jours',
-    icon: '🔒'
+    icon: '📱'
   }
 ];
 
 const partenaires = [
   {
-    nom: 'Microsoft',
-    type: 'Partenaire Technologique',
+    nom: 'France Compétences',
+    type: 'Organisme Certificateur RNCP',
     logo: 'https://images.pexels.com/photos/4348404/pexels-photo-4348404.jpeg'
   },
   {
-    nom: 'Amazon Web Services',
-    type: 'Cloud Partner',
+    nom: 'Mon Compte Formation',
+    type: 'Plateforme CPF Officielle',
     logo: 'https://images.pexels.com/photos/4348404/pexels-photo-4348404.jpeg'
   },
   {
-    nom: 'Scrum Alliance',
-    type: 'Certification Partner',
+    nom: 'QUALIOPI',
+    type: 'Certification Qualité',
     logo: 'https://images.pexels.com/photos/4348404/pexels-photo-4348404.jpeg'
   },
   {
-    nom: 'AXELOS (ITIL)',
-    type: 'Official Training Partner',
+    nom: 'Pôle Emploi',
+    type: 'Partenaire Formation',
     logo: 'https://images.pexels.com/photos/4348404/pexels-photo-4348404.jpeg'
   }
 ];
 
 const testimonials = [
   {
-    name: 'Jean-Michel Dupont',
-    role: 'Dirigeant TPE - E-commerce',
-    content: 'La formation transformation digitale m\'a permis de digitaliser mon entreprise avec succès. Le plan d\'action était parfaitement adapté à mes besoins.',
+    name: 'Marie-Claire Dubois',
+    role: 'Négociatrice Technico-Commerciale',
+    content: 'La formation RNCP NTC m\'a donné toutes les clés pour réussir dans la vente. J\'ai obtenu ma certification et décroché un poste en CDI immédiatement après.',
     image: 'https://images.pexels.com/photos/3785077/pexels-photo-3785077.jpeg'
   },
   {
-    name: 'Sophie Moreau',
-    role: 'Chef de projet IT',
-    content: 'Excellente formation en gestion de projets informatiques. Les méthodologies Agile et Scrum sont maintenant parfaitement maîtrisées.',
+    name: 'Thomas Martin',
+    role: 'Assistant RH',
+    content: 'Excellente formation RNCP ARH ! Les compétences en recrutement et administration du personnel sont parfaitement maîtrisées. Je recommande vivement.',
     image: 'https://images.pexels.com/photos/3912468/pexels-photo-3912468.jpeg'
   },
   {
-    name: 'Alexandre Bernard',
-    role: 'Responsable IT',
-    content: 'Formation ITIL V4 très professionnelle. J\'ai obtenu ma certification et applique maintenant les bonnes pratiques dans mon entreprise.',
+    name: 'Sophie Moreau',
+    role: 'Entrepreneur',
+    content: 'La formation marketing digital m\'a permis de développer ma présence sur les réseaux sociaux et d\'augmenter mon chiffre d\'affaires de 40% en 6 mois.',
     image: 'https://images.pexels.com/photos/3912469/pexels-photo-3912469.jpeg'
   }
 ];
 
 const certifications = [
   'QUALIOPI',
-  'France Compétences RS6074',
+  'France Compétences RNCP',
   'Datadock',
-  'OPCO Entreprises'
+  'OPCO Entreprises',
+  'CPF Éligible'
 ];
 
 export default function HomePage() {
@@ -165,9 +164,9 @@ export default function HomePage() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <Hero
-        title="Transformez votre avenir numérique"
-        subtitle="FORMATIONS INFORMATIQUES & DIGITALES"
-        description="Spécialiste de la formation aux métiers de l'informatique, de la transformation digitale et de la gestion de projets IT. Formations certifiantes reconnues par France Compétences."
+        title="Transformez votre avenir professionnel"
+        subtitle="FORMATIONS RNCP & DÉVELOPPEMENT PERSONNEL"
+        description="Spécialiste des formations professionnelles certifiantes : RNCP Négociateur Technico-Commercial, Assistant RH, développement personnel, anglais professionnel et marketing digital. Formations éligibles CPF."
         primaryCTA={{
           text: "Découvrir nos formations",
           href: "/formations"
@@ -180,15 +179,15 @@ export default function HomePage() {
       />
 
       {/* Stats Section */}
-      <section className="py-16 bg-white">
+      <section className="py-12 sm:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-3xl lg:text-4xl font-bold text-kassiopee-navy mb-2">
+                <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-kassiopee-navy mb-2">
                   {stat.number}
                 </div>
-                <div className="text-gray-600 font-medium">
+                <div className="text-sm sm:text-base text-gray-600 font-medium">
                   {stat.label}
                 </div>
               </div>
@@ -198,19 +197,19 @@ export default function HomePage() {
       </section>
 
       {/* Featured Formations */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-16 sm:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Nos formations <span className="text-kassiopee-navy">phares</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Découvrez nos formations spécialisées en informatique et transformation digitale, 
-              conçues pour répondre aux besoins du marché IT et accompagner les entreprises dans leur évolution numérique.
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+              Découvrez nos formations professionnelles certifiantes : RNCP, développement personnel, 
+              langues et marketing digital. Conçues pour répondre aux besoins du marché de l'emploi et éligibles CPF.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12">
             {featuredFormations.map((formation) => (
               <FormationCard key={formation.id} {...formation} />
             ))}
@@ -219,7 +218,7 @@ export default function HomePage() {
           <div className="text-center">
             <Link
               href="/formations"
-              className="inline-flex items-center bg-kassiopee-navy text-white px-8 py-4 rounded-lg font-semibold hover:bg-kassiopee-navy/90 transition-colors"
+              className="inline-flex items-center bg-kassiopee-navy text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-kassiopee-navy/90 transition-colors text-sm sm:text-base"
             >
               Voir toutes nos formations
               <ArrowRight className="ml-2 h-5 w-5" />
@@ -228,36 +227,36 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Technologies & Certifications Section */}
-      <section className="py-20 bg-white">
+      {/* Domaines de Formation Section */}
+      <section className="py-16 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Technologies & <span className="text-kassiopee-navy">Certifications</span>
+              Nos domaines de <span className="text-kassiopee-navy">formation</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Maîtrisez les technologies les plus demandées et obtenez des certifications 
-              reconnues par l'industrie pour booster votre carrière IT.
+              Développez vos compétences professionnelles avec nos formations certifiantes 
+              dans les domaines les plus recherchés du marché de l'emploi.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            {technologiesCertifications.map((tech, index) => (
-              <div key={index} className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-16">
+            {domainesFormation.map((domaine, index) => (
+              <div key={index} className="bg-gray-50 rounded-xl p-4 sm:p-6 hover:shadow-lg transition-shadow duration-300">
                 <div className="flex items-center mb-4">
-                  <span className="text-3xl mr-3">{tech.icon}</span>
+                  <span className="text-3xl mr-3">{domaine.icon}</span>
                   <div>
-                    <h3 className="text-xl font-bold text-kassiopee-navy">{tech.categorie}</h3>
-                    <p className="text-sm text-gray-600">{tech.niveau} • {tech.duree}</p>
+                    <h3 className="text-lg sm:text-xl font-bold text-kassiopee-navy">{domaine.categorie}</h3>
+                    <p className="text-sm text-gray-600">{domaine.niveau} • {domaine.duree}</p>
                   </div>
                 </div>
                 
                 <div className="mb-4">
-                  <h4 className="font-semibold text-gray-900 mb-2">🛠️ Technologies</h4>
+                  <h4 className="font-semibold text-gray-900 mb-2">🛠️ Compétences</h4>
                   <div className="flex flex-wrap gap-1">
-                    {tech.technologies.map((technology, idx) => (
+                    {domaine.competences.map((competence, idx) => (
                       <span key={idx} className="bg-kassiopee-navy text-white px-2 py-1 rounded text-xs">
-                        {technology}
+                        {competence}
                       </span>
                     ))}
                   </div>
@@ -266,7 +265,7 @@ export default function HomePage() {
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-2">🏆 Certifications</h4>
                   <div className="space-y-1">
-                    {tech.certifications.map((cert, idx) => (
+                    {domaine.certifications.map((cert, idx) => (
                       <div key={idx} className="flex items-center text-sm text-gray-700">
                         <CheckCircle className="h-4 w-4 text-kassiopee-gold mr-2" />
                         {cert}
@@ -291,27 +290,27 @@ export default function HomePage() {
       </section>
 
       {/* Partenaires Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-12 sm:py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">
-              Nos <span className="text-kassiopee-navy">Partenaires Technologiques</span>
+              Nos <span className="text-kassiopee-navy">Partenaires & Certifications</span>
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Nous collaborons avec les leaders du marché pour vous offrir des formations 
-              à la pointe de la technologie et des certifications reconnues.
+              Nous collaborons avec les organismes officiels pour vous offrir des formations 
+              certifiantes reconnues par l'État et éligibles au financement CPF.
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
             {partenaires.map((partenaire, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
+              <div key={index} className="bg-white p-4 sm:p-6 rounded-lg shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
                 <div className="relative h-16 w-16 mx-auto mb-4">
                   <div className="bg-kassiopee-navy text-white rounded-lg h-full w-full flex items-center justify-center font-bold text-lg">
                     {partenaire.nom.charAt(0)}
                   </div>
                 </div>
-                <h4 className="font-bold text-gray-900 mb-1">{partenaire.nom}</h4>
+                <h4 className="text-sm sm:text-base font-bold text-gray-900 mb-1">{partenaire.nom}</h4>
                 <p className="text-xs text-gray-600">{partenaire.type}</p>
               </div>
             ))}
@@ -320,15 +319,15 @@ export default function HomePage() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20 bg-kassiopee-navy text-white">
+      <section className="py-16 sm:py-20 bg-kassiopee-navy text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Pourquoi choisir <span className="text-kassiopee-gold">Kassiopée Formation</span> ?
             </h2>
             <p className="text-xl text-gray-200 max-w-3xl mx-auto">
-              Plus de 10 ans d'expertise dans la formation informatique et digitale 
-              pour vous garantir des compétences alignées avec le marché.
+              Plus de 15 ans d'expertise dans la formation professionnelle 
+              pour vous garantir des compétences alignées avec le marché de l'emploi.
             </p>
           </div>
 
@@ -337,9 +336,9 @@ export default function HomePage() {
               <div className="bg-kassiopee-gold text-kassiopee-navy p-4 rounded-full w-16 h-16 mx-auto mb-6 flex items-center justify-center">
                 <Award className="h-8 w-8" />
               </div>
-              <h3 className="text-xl font-bold mb-4">Certifications reconnues</h3>
+              <h3 className="text-lg sm:text-xl font-bold mb-4">Certifications reconnues</h3>
               <p className="text-gray-200">
-                QUALIOPI, France Compétences RS6074, Datadock : nos formations sont certifiées et reconnues par les professionnels IT.
+                QUALIOPI, France Compétences RNCP, Datadock : nos formations sont certifiées et reconnues par les professionnels.
               </p>
             </div>
 
@@ -347,9 +346,9 @@ export default function HomePage() {
               <div className="bg-kassiopee-gold text-kassiopee-navy p-4 rounded-full w-16 h-16 mx-auto mb-6 flex items-center justify-center">
                 <Users className="h-8 w-8" />
               </div>
-              <h3 className="text-xl font-bold mb-4">Accompagnement personnalisé</h3>
+              <h3 className="text-lg sm:text-xl font-bold mb-4">Accompagnement personnalisé</h3>
               <p className="text-gray-200">
-                Chaque apprenant bénéficie d'un suivi individualisé par nos formateurs experts en technologies et transformation digitale.
+                Chaque apprenant bénéficie d'un suivi individualisé par nos formateurs experts en formations professionnelles et développement personnel.
               </p>
             </div>
 
@@ -357,7 +356,7 @@ export default function HomePage() {
               <div className="bg-kassiopee-gold text-kassiopee-navy p-4 rounded-full w-16 h-16 mx-auto mb-6 flex items-center justify-center">
                 <CheckCircle className="h-8 w-8" />
               </div>
-              <h3 className="text-xl font-bold mb-4">Taux de réussite élevé</h3>
+              <h3 className="text-lg sm:text-xl font-bold mb-4">Taux de réussite élevé</h3>
               <p className="text-gray-200">
                 95% de taux de réussite aux certifications grâce à notre pédagogie pratique et nos études de cas réels.
               </p>
@@ -367,20 +366,20 @@ export default function HomePage() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-16 sm:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Ils témoignent de leur <span className="text-kassiopee-navy">réussite</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Découvrez les témoignages de nos apprenants qui ont réussi leur transformation digitale et leur montée en compétences IT.
+              Découvrez les témoignages de nos apprenants qui ont réussi leur reconversion professionnelle et obtenu leurs certifications RNCP.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white p-8 rounded-xl shadow-lg">
+              <div key={index} className="bg-white p-6 sm:p-8 rounded-xl shadow-lg">
                 <div className="flex items-center mb-6">
                   <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">
                     <Image
@@ -403,7 +402,7 @@ export default function HomePage() {
       </section>
 
       {/* Certifications */}
-      <section className="py-16 bg-white">
+      <section className="py-12 sm:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">
@@ -411,7 +410,7 @@ export default function HomePage() {
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Kassiopée Formation est certifié par les principaux organismes de qualité 
-              et reconnu par France Compétences pour ses formations en transformation digitale.
+              et reconnu par France Compétences pour ses formations RNCP et professionnelles.
             </p>
           </div>
 
@@ -428,15 +427,24 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <FAQSection 
+        title="Questions Fréquentes"
+        subtitle="Trouvez rapidement les réponses à vos questions sur nos formations RNCP et le financement CPF"
+        showCategories={true}
+        maxItems={6}
+        className="bg-gray-50"
+      />
+
       {/* CTA Section */}
-      <section className="py-20 bg-kassiopee-gold">
+      <section className="py-16 sm:py-20 bg-kassiopee-gold">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-kassiopee-navy mb-6">
             Prêt à transformer votre avenir professionnel ?
           </h2>
           <p className="text-xl text-kassiopee-navy/80 mb-10 max-w-2xl mx-auto">
             Rejoignez les centaines de professionnels qui ont fait confiance à Kassiopée Formation 
-            pour développer leurs compétences IT et digitales.
+            pour développer leurs compétences et obtenir leurs certifications RNCP.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

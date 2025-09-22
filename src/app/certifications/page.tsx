@@ -5,60 +5,94 @@ import { generateSEO } from '@/lib/seo';
 
 export const metadata = generateSEO({
   title: "Certifications - Kassiopée Formation",
-  description: "Découvrez toutes les certifications professionnelles que vous pouvez obtenir avec nos formations informatiques et transformation digitale.",
-  keywords: "certifications informatiques, RS6074, ITIL V4, Scrum Master, certifications professionnelles",
+  description: "Découvrez toutes les certifications professionnelles que vous pouvez obtenir avec nos formations RNCP, développement personnel, anglais et marketing digital.",
+  keywords: "certifications RNCP, négociateur technico-commercial, assistant RH, certifications professionnelles, CPF",
 });
 
 const certifications = [
   {
-    nom: "RS6074 - Transformation Digitale TPE",
+    nom: "RNCP 39063 - Négociateur Technico-Commercial",
     organisme: "France Compétences",
-    description: "Certification officielle pour élaborer et piloter un plan d'action de transformation digitale adapté aux TPE.",
-    formation: "Transformation Digitale pour TPE",
-    duree: "5 jours (28h)",
-    prix: "3100€ TTC",
-    href: "/formations/transformation-digitale-tpe",
-    niveau: "Dirigeants TPE",
-    reconnaissance: "Reconnue par l'État",
+    description: "Titre professionnel reconnu par l'État pour maîtriser les techniques de vente, prospection et négociation commerciale.",
+    formation: "RNCP Négociateur Technico-Commercial",
+    duree: "5 jours (35h)",
+    prix: "2500€ TTC",
+    href: "/formations/formation-ntc",
+    niveau: "Conseillers commerciaux",
+    reconnaissance: "Titre RNCP niveau 5 (Bac+2)",
     avantages: [
-      "Certification enregistrée au Répertoire Spécifique",
+      "Titre reconnu par l'État",
       "Éligible au CPF",
-      "Reconnaissance professionnelle",
-      "Compétences digitales certifiées"
+      "Insertion professionnelle garantie",
+      "Compétences commerciales certifiées"
     ]
   },
   {
-    nom: "ITIL V4 Foundation",
-    organisme: "AXELOS",
-    description: "Certification internationale de référence pour la gestion des services informatiques selon le framework ITIL V4.",
-    formation: "ITIL V4 - Fondements et Concepts",
-    duree: "3 jours (21h)",
-    prix: "1800€ TTC",
-    href: "/formations/itil-v4-fondements",
-    niveau: "Professionnels IT",
-    reconnaissance: "Certification internationale",
+    nom: "RNCP 35030 - Assistant Ressources Humaines",
+    organisme: "France Compétences",
+    description: "Titre professionnel pour maîtriser l'administration du personnel, le recrutement et la gestion des compétences.",
+    formation: "RNCP Assistant Ressources Humaines",
+    duree: "5 jours (35h)",
+    prix: "2300€ TTC",
+    href: "/formations/formation-arh",
+    niveau: "Assistant(e) RH",
+    reconnaissance: "Titre RNCP niveau 5 (Bac+2)",
     avantages: [
-      "Standard mondial ITIL",
+      "Titre reconnu par l'État",
+      "Éligible au CPF",
+      "Évolution vers responsable RH",
+      "Compétences RH complètes"
+    ]
+  },
+  {
+    nom: "Certification Développement Personnel",
+    organisme: "Kassiopée Formation",
+    description: "Certification pour optimiser sa candidature et maîtriser les techniques de recherche d'emploi.",
+    formation: "Booster sa Candidature (CV)",
+    duree: "1 jour (7h)",
+    prix: "450€ TTC",
+    href: "/formations/formation-cv",
+    niveau: "Tout public",
+    reconnaissance: "Certification professionnelle",
+    avantages: [
+      "CV professionnel optimisé",
+      "Techniques de candidature",
+      "Personal branding",
+      "Stratégie de recherche d'emploi"
+    ]
+  },
+  {
+    nom: "Certification Anglais Professionnel",
+    organisme: "TOEIC",
+    description: "Certification pour maîtriser l'anglais des affaires et la communication professionnelle internationale.",
+    formation: "Anglais Professionnel",
+    duree: "2 jours (14h)",
+    prix: "800€ TTC",
+    href: "/formations/formation-anglais",
+    niveau: "Salariés, demandeurs d'emploi",
+    reconnaissance: "Certification TOEIC",
+    avantages: [
       "Reconnaissance internationale",
+      "Communication professionnelle",
       "Évolution de carrière",
-      "Amélioration des processus IT"
+      "Mobilité internationale"
     ]
   },
   {
-    nom: "Scrum Master Certified",
-    organisme: "Scrum Alliance",
-    description: "Certification pour maîtriser le rôle et les missions du Scrum Master dans une équipe Agile.",
-    formation: "Scrum Master Agile",
+    nom: "Certification Marketing Digital",
+    organisme: "Google / Facebook",
+    description: "Certification pour maîtriser les stratégies de marketing digital, réseaux sociaux et acquisition client.",
+    formation: "Marketing Digital",
     duree: "3 jours (21h)",
-    prix: "1900€ TTC",
-    href: "/formations/scrum-master-agile",
-    niveau: "Chefs de projet",
-    reconnaissance: "Certification Agile",
+    prix: "1200€ TTC",
+    href: "/formations/formation-marketing",
+    niveau: "Entrepreneurs, responsables marketing",
+    reconnaissance: "Certifications Google & Facebook",
     avantages: [
-      "Méthodologie Agile certifiée",
-      "Leadership d'équipe",
-      "Gestion de projets innovants",
-      "Compétences recherchées"
+      "Stratégies digitales certifiées",
+      "ROI marketing mesurable",
+      "Compétences recherchées",
+      "Croissance business"
     ]
   }
 ];
@@ -70,14 +104,14 @@ const partenaires = [
     logo: "🇫🇷"
   },
   {
-    nom: "AXELOS",
-    description: "Propriétaire officiel du framework ITIL et des certifications associées",
-    logo: "🛠️"
+    nom: "Mon Compte Formation",
+    description: "Plateforme officielle pour utiliser ses droits CPF et financer ses formations",
+    logo: "💳"
   },
   {
-    nom: "Scrum Alliance",
-    description: "Organisation mondiale de certification des pratiques Agiles et Scrum",
-    logo: "⚡"
+    nom: "TOEIC",
+    description: "Référence mondiale pour l'évaluation des compétences en anglais professionnel",
+    logo: "🌍"
   },
   {
     nom: "QUALIOPI",
@@ -97,8 +131,8 @@ export default function CertificationsPage() {
               Nos <span className="text-kassiopee-gold">Certifications</span>
             </h1>
             <p className="text-xl text-gray-200 max-w-3xl mx-auto">
-              Obtenez des certifications reconnues par l'industrie et boostez votre carrière 
-              avec nos formations informatiques et transformation digitale.
+              Obtenez des certifications reconnues par l'État et boostez votre carrière 
+              avec nos formations RNCP et professionnelles.
             </p>
           </div>
         </div>
@@ -113,7 +147,7 @@ export default function CertificationsPage() {
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Nos formations vous préparent aux certifications les plus recherchées 
-              du marché informatique et digital.
+              du marché professionnel et aux titres RNCP reconnus par l'État.
             </p>
           </div>
 
@@ -225,7 +259,7 @@ export default function CertificationsPage() {
               </div>
               <h3 className="text-xl font-bold mb-4">Reconnaissance Officielle</h3>
               <p className="text-gray-200">
-                Toutes nos certifications sont reconnues par les organismes officiels 
+                Toutes nos certifications sont reconnues par l'État, les organismes officiels 
                 et les entreprises du secteur.
               </p>
             </div>
@@ -263,7 +297,7 @@ export default function CertificationsPage() {
           </h2>
           <p className="text-xl text-kassiopee-navy/80 mb-10 max-w-2xl mx-auto">
             Rejoignez nos formations et obtenez les certifications qui feront 
-            la différence dans votre carrière IT.
+            la différence dans votre carrière professionnelle.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

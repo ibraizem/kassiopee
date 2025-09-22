@@ -31,7 +31,7 @@ export default function Hero({
   const techIcons = [Code, Cpu, Zap, Shield, Cloud, Database];
 
   return (
-    <section className="relative min-h-screen lg:min-h-[110vh] flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[100vh] sm:min-h-screen lg:min-h-[110vh] flex items-center justify-center overflow-hidden">
       {/* Background with Gradient Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -71,7 +71,7 @@ export default function Hero({
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 xl:gap-20 items-center">
           {/* Left Column - Text Content */}
           <div className="text-center lg:text-left">
@@ -84,7 +84,7 @@ export default function Hero({
               </div>
             )}
             
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 sm:mb-8 leading-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white mb-6 sm:mb-8 leading-tight">
               <span className="block">
                 <span className="text-kassiopee-gold">Transformez</span>
               </span>
@@ -96,7 +96,7 @@ export default function Hero({
               </span>
             </h1>
             
-            <p className="text-lg sm:text-xl md:text-2xl lg:text-2xl text-gray-200 mb-8 sm:mb-10 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-200 mb-8 sm:mb-10 leading-relaxed max-w-2xl mx-auto lg:mx-0">
               {description}
             </p>
             
@@ -108,7 +108,7 @@ export default function Hero({
               </div>
               <div className="flex items-center text-kassiopee-gold">
                 <Zap className="h-5 w-5 mr-2" />
-                <span className="text-xs sm:text-sm font-semibold">RS6074</span>
+                <span className="text-xs sm:text-sm font-semibold">RNCP</span>
               </div>
               <div className="flex items-center text-kassiopee-gold">
                 <Code className="h-5 w-5 mr-2" />
@@ -116,7 +116,7 @@ export default function Hero({
               </div>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-center lg:items-start">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-stretch sm:items-center lg:items-start">
               <Link
                 href={primaryCTA.href}
                 className="group bg-kassiopee-gold text-kassiopee-navy px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg hover:bg-yellow-400 transition-all duration-300 hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 relative overflow-hidden w-full sm:w-auto"
@@ -147,34 +147,35 @@ export default function Hero({
                   <div className="flex items-center justify-between">
                     <h3 className="text-white font-bold text-xl">Formations Disponibles</h3>
                     <div className="bg-kassiopee-gold text-kassiopee-navy px-3 py-1 rounded-full text-sm font-bold">
-                      6 formations
+                      5 formations
                     </div>
                   </div>
                   
                   <div className="space-y-4">
-                    {[
-                      { name: 'Transformation Digitale', icon: Zap, progress: 95 },
-                      { name: 'ITIL V4 Foundation', icon: Shield, progress: 88 },
-                      { name: 'Scrum Master', icon: Code, progress: 92 },
-                      { name: 'Intelligence Artificielle', icon: Cpu, progress: 90 }
-                    ].map((item, index) => (
-                      <div key={index} className="flex items-center space-x-4">
-                        <div className="bg-kassiopee-gold/20 p-2 rounded-lg">
-                          <item.icon className="h-5 w-5 text-kassiopee-gold" />
-                        </div>
-                        <div className="flex-1">
-                          <div className="flex justify-between items-center mb-1">
-                            <span className="text-white font-medium text-sm">{item.name}</span>
-                            <span className="text-kassiopee-gold text-sm">{item.progress}%</span>
+                    {
+                      [
+                        { name: 'RNCP Négociateur Commercial', icon: Zap, progress: 95 },
+                        { name: 'RNCP Assistant RH', icon: Shield, progress: 88 },
+                        { name: 'Booster sa Candidature', icon: Code, progress: 92 },
+                        { name: 'Marketing Digital', icon: Cpu, progress: 90 }
+                      ].map((item, index) => (
+                        <div key={index} className="flex items-center space-x-4">
+                          <div className="bg-kassiopee-gold/20 p-2 rounded-lg">
+                            <item.icon className="h-5 w-5 text-kassiopee-gold" />
                           </div>
-                          <div className="w-full bg-white/20 rounded-full h-2">
-                            <div 
-                              className="bg-gradient-to-r from-kassiopee-gold to-kassiopee-lightblue h-2 rounded-full transition-all duration-1000"
-                              style={{ width: `${item.progress}%` }}
-                            />
+                          <div className="flex-1">
+                            <div className="flex justify-between items-center mb-1">
+                              <span className="text-white font-medium text-sm">{item.name}</span>
+                              <span className="text-kassiopee-gold text-sm">{item.progress}%</span>
+                            </div>
+                            <div className="w-full bg-white/20 rounded-full h-2">
+                              <div 
+                                className="bg-gradient-to-r from-kassiopee-gold to-kassiopee-lightblue h-2 rounded-full transition-all duration-1000"
+                                style={{ width: `${item.progress}%` }}
+                              />
+                            </div>
                           </div>
                         </div>
-                      </div>
                     ))}
                   </div>
                 </div>

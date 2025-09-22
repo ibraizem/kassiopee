@@ -347,7 +347,7 @@ export default function KanbanGestionFluxPage() {
                 </div>
                 <div className="flex items-center">
                   <Mail className="h-6 w-6 text-kassiopee-gold mr-4" />
-                  <span className="text-gray-200">contact@kassiopee-formation.com</span>
+                  <span className="text-gray-200">direction@kassiopee-formation.com</span>
                 </div>
               </div>
             </div>

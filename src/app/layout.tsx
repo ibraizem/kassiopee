@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
-import "./globals.css";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
+import './globals.css';
+import Header from '@/components/layout/Header';
+import Footer from '@/components/layout/Footer';
+import AdvancedAnalytics from '@/components/analytics/AdvancedAnalytics';
+import ChatBot from '@/components/ui/ChatBot';
+import PWAInstaller from '@/components/pwa/PWAInstaller';
 import { organizationJsonLd } from "@/lib/seo";
 
 const inter = Inter({
@@ -76,6 +79,12 @@ export default function RootLayout({
   return (
     <html lang="fr" className={`${inter.variable} ${playfair.variable}`}>
       <head>
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#1e3a8a" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content="Kassiopée Formation" />
+        <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
@@ -103,9 +112,12 @@ export default function RootLayout({
         )}
       </head>
       <body className="font-sans antialiased">
+        <AdvancedAnalytics />
         <Header />
         <main>{children}</main>
         <Footer />
+        <ChatBot />
+        <PWAInstaller />
       </body>
     </html>
   );

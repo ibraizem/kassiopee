@@ -42,11 +42,20 @@ const navigation = [
     ],
   },
   {
+    name: 'Services',
+    href: '#',
+    children: [
+      { name: 'Financement CPF', href: '/financement-cpf' },
+      { name: 'Devenez Négociateur Technico-Commercial Certifié', href: '/landing/formation-ntc' },
+      { name: 'Réserver une session', href: '/contact' },
+    ],
+  },
+  {
     name: 'À propos',
     href: '/a-propos',
     children: [
       { name: 'Qui sommes-nous', href: '/a-propos' },
-      { name: 'Notre expertise IT', href: '/expertise-it' },
+      { name: 'Notre expertise Formation', href: '/expertise-it' },
       { name: 'Nos résultats', href: '/nos-resultats' },
       { name: 'Recrutement', href: '/recrutement' },
     ],

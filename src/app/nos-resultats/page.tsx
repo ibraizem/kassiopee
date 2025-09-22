@@ -4,8 +4,8 @@ import { generateSEO } from '@/lib/seo';
 
 export const metadata = generateSEO({
   title: "Nos résultats - Kassiopée Formation",
-  description: "Découvrez nos indicateurs de réussite, taux de satisfaction et résultats de nos formations informatiques et transformation digitale.",
-  keywords: "résultats formation, taux réussite, satisfaction, indicateurs qualité, QUALIOPI",
+  description: "Découvrez nos indicateurs de réussite, taux de satisfaction et résultats de nos formations RNCP et professionnelles.",
+  keywords: "résultats formation, taux réussite, satisfaction, indicateurs qualité, QUALIOPI, RNCP",
 });
 
 const statistiques = [
@@ -17,7 +17,7 @@ const statistiques = [
   },
   {
     chiffre: "500+",
-    description: "Professionnels IT formés",
+    description: "Diplômés formés",
     icon: Users,
     couleur: "text-kassiopee-navy"
   },
@@ -35,7 +35,7 @@ const statistiques = [
   },
   {
     chiffre: "10+",
-    description: "Années d'expertise IT",
+    description: "Années d'expertise",
     icon: Award,
     couleur: "text-purple-600"
   },
@@ -49,67 +49,60 @@ const statistiques = [
 
 const resultatsFormations = [
   {
-    formation: "Transformation Digitale TPE (RS6074)",
+    formation: "RNCP NTC - Négociateur Technico-Commercial",
     participants: 156,
-    tauxReussite: 97,
+    tauxReussite: 95,
     satisfaction: 4.9,
     emploi: 94
   },
   {
-    formation: "ITIL V4 - Fondements et Concepts",
+    formation: "RNCP ARH - Assistant Ressources Humaines",
     participants: 89,
-    tauxReussite: 93,
+    tauxReussite: 88,
     satisfaction: 4.7,
     emploi: 89
   },
   {
-    formation: "Scrum Master Agile",
+    formation: "Booster sa Candidature (CV)",
     participants: 124,
-    tauxReussite: 96,
+    tauxReussite: 92,
     satisfaction: 4.8,
     emploi: 95
   },
   {
-    formation: "Gestion de Projets Informatiques",
+    formation: "Anglais Professionnel",
     participants: 78,
-    tauxReussite: 94,
+    tauxReussite: 90,
     satisfaction: 4.6,
     emploi: 91
   },
   {
-    formation: "Intelligence Artificielle",
-    participants: 45,
-    tauxReussite: 91,
+    formation: "Marketing Digital",
+    participants: 67,
+    tauxReussite: 90,
     satisfaction: 4.9,
     emploi: 87
-  },
-  {
-    formation: "Kanban Gestion des Flux",
-    participants: 67,
-    tauxReussite: 98,
-    satisfaction: 4.7,
-    emploi: 93
   }
 ];
 
 const temoignagesEntreprises = [
   {
-    entreprise: "TechCorp Solutions",
-    secteur: "Développement logiciel",
-    temoignage: "Nos équipes ont été formées sur ITIL V4 et Scrum. L'amélioration de nos processus est remarquable. +30% d'efficacité sur nos projets.",
-    responsable: "Marie Dubois, DSI"
+    entreprise: "CommercePro",
+    secteur: "Vente et négociation",
+    temoignage: "Nos commerciaux ont suivi la formation RNCP NTC. L'amélioration de leurs techniques de vente est remarquable. +40% de closing sur nos prospects.",
+    responsable: "Marie Dubois, Directrice Commerciale"
   },
   {
-    entreprise: "Digital Innovations",
-    secteur: "Transformation digitale",
-    temoignage: "La formation RS6074 a permis à nos dirigeants de structurer notre transformation digitale. ROI de 250% sur 18 mois.",
-    responsable: "Pierre Martin, CEO"
+    entreprise: "RH Solutions",
+    secteur: "Ressources humaines",
+    temoignage: "La formation RNCP ARH a permis à nos assistantes RH de maîtriser parfaitement l'administration du personnel. Gain de temps considérable.",
+    responsable: "Pierre Martin, DRH"
   },
   {
-    entreprise: "AI Consulting",
-    secteur: "Intelligence artificielle",
-    temoignage: "Formation IA excellente, très pratique. Nos consultants maîtrisent maintenant les dernières technologies ML et Deep Learning.",
-    responsable: "Sophie Chen, CTO"
+    entreprise: "Digital Marketing Agency",
+    secteur: "Marketing digital",
+    temoignage: "Formation marketing digital excellente, très pratique. Nos équipes maîtrisent maintenant les réseaux sociaux et les campagnes d'acquisition.",
+    responsable: "Sophie Chen, CEO"
   }
 ];
 
@@ -121,15 +114,15 @@ const certifications = [
     validite: "2026"
   },
   {
-    nom: "France Compétences RS6074",
-    description: "Enregistrement au Répertoire Spécifique",
+    nom: "France Compétences RNCP",
+    description: "Enregistrement au Répertoire National des Certifications Professionnelles",
     obtenue: "2023",
     validite: "2026"
   },
   {
-    nom: "Datadock",
-    description: "Référencement qualité formation",
-    obtenue: "2022",
+    nom: "CPF Éligible",
+    description: "Formations finançables via le Compte Personnel de Formation",
+    obtenue: "2023",
     validite: "Permanent"
   }
 ];
@@ -145,7 +138,7 @@ export default function NosResultatsPage() {
               Nos <span className="text-kassiopee-gold">Résultats</span>
             </h1>
             <p className="text-xl text-gray-200 max-w-3xl mx-auto">
-              Découvrez les indicateurs de qualité et de performance de nos formations informatiques. 
+              Découvrez les indicateurs de qualité et de performance de nos formations RNCP et professionnelles. 
               Des résultats concrets qui témoignent de notre excellence pédagogique.
             </p>
           </div>
@@ -194,7 +187,7 @@ export default function NosResultatsPage() {
               Résultats par <span className="text-kassiopee-navy">Formation</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Performance détaillée de chacune de nos formations informatiques.
+              Performance détaillée de chacune de nos formations professionnelles.
             </p>
           </div>
 

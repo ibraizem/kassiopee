@@ -5,15 +5,16 @@ import Logo from '@/components/ui/Logo';
 
 const footerLinks = {
   formations: [
-    { name: 'Transformation Digitale TPE', href: '/formations/transformation-digitale-tpe' },
-    { name: 'Gestion de Projets IT', href: '/formations/gestion-projets-informatiques' },
-    { name: 'ITIL V4 Fondements', href: '/formations/itil-v4-fondements' },
+    { name: 'RNCP Négociateur Technico-Commercial', href: '/formations/formation-ntc' },
+    { name: 'RNCP Assistant Ressources Humaines', href: '/formations/formation-arh' },
+    { name: 'Booster sa Candidature (CV)', href: '/formations/formation-cv' },
+    { name: 'Anglais Professionnel', href: '/formations/formation-anglais' },
+    { name: 'Marketing Digital', href: '/formations/formation-marketing' },
     { name: 'Toutes les formations', href: '/formations' },
   ],
-  certifications: [
-    { name: 'RS6074 France Compétences', href: '/formations/transformation-digitale-tpe' },
-    { name: 'ITIL V4 Foundation', href: '/formations/itil-v4-fondements' },
-    { name: 'Scrum Master Certified', href: '/formations/scrum-master-agile' },
+  services: [
+    { name: 'Financement CPF', href: '/financement-cpf' },
+    { name: 'Devenez Négociateur Technico-Commercial Certifié', href: '/landing/formation-ntc' },
     { name: 'Toutes les certifications', href: '/certifications' },
   ],
   company: [
@@ -39,9 +40,9 @@ const socialLinks = [
 
 const certifications = [
   'QUALIOPI',
-  'France Compétences RS6074',
-  'ITIL V4 Foundation',
-  'Scrum Alliance',
+  'France Compétences RNCP',
+  'CPF Éligible',
+  'Datadock',
 ];
 
 export default function Footer() {
@@ -54,11 +55,13 @@ export default function Footer() {
           <div className="sm:col-span-2 lg:col-span-1">
             <div className="mb-6">
               <div className="mb-4">
-                <Logo className="h-10 w-auto filter brightness-0 invert" width={160} height={40} />
+                <div className="bg-kassiopee-gold p-3 rounded-lg inline-block">
+                  <Logo className="h-10 w-auto" width={160} height={40} />
+                </div>
               </div>
               <p className="text-gray-300 text-sm leading-relaxed">
-                Organisme de formation professionnelle spécialisé dans l'informatique, 
-                la transformation digitale et les nouvelles technologies.
+                Organisme de formation professionnelle spécialisé dans les formations RNCP, 
+                le développement personnel, les langues et le marketing digital.
               </p>
             </div>
             
@@ -89,7 +92,7 @@ export default function Footer() {
                 <div>
                   <p className="text-sm font-medium">Email</p>
                   <p className="text-xs text-gray-300">
-                    contact@kassiopee-formation.com
+                    direction@kassiopee-formation.com
                   </p>
                 </div>
               </div>
@@ -113,11 +116,11 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Certifications */}
+          {/* Services */}
           <div className="mt-8 sm:mt-0">
-            <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-kassiopee-gold">Certifications</h3>
+            <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-kassiopee-gold">Nos services</h3>
             <ul className="space-y-2">
-              {footerLinks.certifications.map((link) => (
+              {footerLinks.services.map((link) => (
                 <li key={link.name}>
                   <Link 
                     href={link.href}
