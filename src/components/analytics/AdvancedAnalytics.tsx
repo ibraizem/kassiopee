@@ -6,8 +6,15 @@ import { usePathname, useSearchParams } from 'next/navigation';
 declare global {
   interface Window {
     gtag: (...args: any[]) => void;
-    fbq: (...args: any[]) => void;
+    fbq: {
+      (...args: any[]): void;
+      q?: any[];
+    };
     dataLayer: any[];
+    hj?: {
+      (...args: any[]): void;
+      q?: any[];
+    };
   }
 }
 
@@ -81,9 +88,12 @@ class AdvancedAnalyticsManager {
     const FB_PIXEL_ID = process.env.NEXT_PUBLIC_FB_PIXEL_ID;
     if (!FB_PIXEL_ID) return;
 
-    window.fbq = window.fbq || function() {
-      (window.fbq.q = window.fbq.q || []).push(arguments);
-    };
+    if (!window.fbq) {
+      window.fbq = function() {
+        (window.fbq.q = window.fbq.q || []).push(arguments);
+      } as any;
+      window.fbq.q = [];
+    }
     
     const script = document.createElement('script');
     script.src = 'https://connect.facebook.net/en_US/fbevents.js';
@@ -276,7 +286,6 @@ class AdvancedAnalyticsManager {
 // Hook React pour utiliser les analytics
 export function useAdvancedAnalytics() {
   const pathname = usePathname();
-  const searchParams = useSearchParams();
   
   useEffect(() => {
     const analytics = AdvancedAnalyticsManager.getInstance();
@@ -287,7 +296,7 @@ export function useAdvancedAnalytics() {
     const analytics = AdvancedAnalyticsManager.getInstance();
     const title = document.title;
     analytics.trackPageView(pathname, title);
-  }, [pathname, searchParams]);
+  }, [pathname]);
 
   return AdvancedAnalyticsManager.getInstance();
 }

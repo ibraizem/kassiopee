@@ -112,7 +112,9 @@ export default function PWAInstaller() {
     setShowInstallBanner(false);
     
     // Ne plus afficher pendant cette session
-    sessionStorage.setItem('pwa-banner-dismissed', 'true');
+    if (typeof window !== 'undefined') {
+      sessionStorage.setItem('pwa-banner-dismissed', 'true');
+    }
     
     // Analytics
     if (typeof window !== 'undefined' && window.gtag) {
@@ -124,7 +126,7 @@ export default function PWAInstaller() {
   };
 
   // Ne pas afficher si déjà installé ou si déjà refusé dans cette session
-  if (isInstalled || sessionStorage.getItem('pwa-banner-dismissed')) {
+  if (isInstalled || (typeof window !== 'undefined' && sessionStorage.getItem('pwa-banner-dismissed'))) {
     return null;
   }
 
