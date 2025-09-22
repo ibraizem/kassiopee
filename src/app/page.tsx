@@ -43,23 +43,49 @@ const featuredFormations = [
     isRNCP: true
   },
   {
-    id: 'formation-marketing',
-    title: 'Marketing Digital — Réseaux Sociaux & Acquisition',
-    description: 'Définir une stratégie social media, produire du contenu engageant et lancer des campagnes d\'acquisition basiques (Facebook/Instagram/LinkedIn).',
-    image: 'https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg',
-    duration: '3 jours (21h)',
+    id: 'formation-cv',
+    title: 'Booster sa Candidature — Un CV Qui Ouvre des Portes',
+    description: 'Permettre de rédiger un CV clair, professionnel et personnalisé, capable d\'attirer l\'attention d\'un recruteur et d\'augmenter le taux de convocation en entretien.',
+    image: 'https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg',
+    duration: '1 journée (6-7h)',
     region: 'Région parisienne',
-    category: 'Marketing Digital',
-    level: 'Entrepreneurs, responsables marketing',
-    nextSession: 'Sessions mensuelles',
-    href: '/formations/formation-marketing',
+    category: 'Développement Personnel',
+    level: 'Tout public',
+    nextSession: 'Sessions hebdomadaires',
+    href: '/formations/formation-cv',
+    isRNCP: false
+  },
+  {
+    id: 'formation-lettre-motivation',
+    title: 'Rédiger une Lettre de Motivation Efficace',
+    description: 'Apprendre à rédiger une lettre de motivation percutante et personnalisée qui donne envie aux recruteurs de vous rencontrer. Maîtriser la structure gagnante.',
+    image: 'https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg',
+    duration: '1 journée (6-7h)',
+    region: 'Région parisienne',
+    category: 'Développement Personnel',
+    level: 'Tout public',
+    nextSession: 'Sessions hebdomadaires',
+    href: '/formations/formation-lettre-motivation',
+    isRNCP: false
+  },
+  {
+    id: 'formation-entretien-embauche',
+    title: 'Réussir son Entretien d\'Embauche',
+    description: 'Apprendre à convaincre en face-à-face et réussir ses entretiens d\'embauche. Gérer son stress, maîtriser sa présentation et répondre avec assurance.',
+    image: 'https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg',
+    duration: '1 journée (6-7h)',
+    region: 'Région parisienne',
+    category: 'Développement Personnel',
+    level: 'Tout public',
+    nextSession: 'Sessions hebdomadaires',
+    href: '/formations/formation-entretien-embauche',
     isRNCP: false
   }
 ];
 
 const stats = [
   { number: '500+', label: 'Diplômés' },
-  { number: '5', label: 'Formations' },
+  { number: '7', label: 'Formations' },
   { number: '95%', label: 'Taux de réussite' },
   { number: '10+', label: 'Ans d\'expertise' },
 ];

@@ -24,6 +24,8 @@ const formations = [
   'RNCP Négociateur Technico-Commercial',
   'RNCP Assistant Ressources Humaines',
   'Booster sa Candidature (CV)',
+  'Rédiger une Lettre de Motivation Efficace',
+  'Réussir son Entretien d\'Embauche',
   'Anglais Professionnel',
   'Marketing Digital',
   'Autre formation',

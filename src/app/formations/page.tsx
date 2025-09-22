@@ -49,6 +49,32 @@ const allFormations = [
     isRNCP: false
   },
   {
+    id: 'formation-lettre-motivation',
+    title: 'Rédiger une Lettre de Motivation Efficace',
+    description: 'Apprendre à rédiger une lettre de motivation percutante et personnalisée qui donne envie aux recruteurs de vous rencontrer. Maîtriser la structure gagnante.',
+    image: 'https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg',
+    duration: '1 journée (6-7h)',
+    region: 'Région parisienne',
+    category: 'Développement Personnel',
+    level: 'Tout public',
+    nextSession: 'Sessions hebdomadaires',
+    href: '/formations/formation-lettre-motivation',
+    isRNCP: false
+  },
+  {
+    id: 'formation-entretien-embauche',
+    title: 'Réussir son Entretien d\'Embauche',
+    description: 'Apprendre à convaincre en face-à-face et réussir ses entretiens d\'embauche. Gérer son stress, maîtriser sa présentation et répondre avec assurance.',
+    image: 'https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg',
+    duration: '1 journée (6-7h)',
+    region: 'Région parisienne',
+    category: 'Développement Personnel',
+    level: 'Tout public',
+    nextSession: 'Sessions hebdomadaires',
+    href: '/formations/formation-entretien-embauche',
+    isRNCP: false
+  },
+  {
     id: 'formation-anglais',
     title: 'Anglais Professionnel — Niveau Opérationnel',
     description: 'Gagner en aisance dans les échanges professionnels courants (emails, téléphone, présentations simples) et acquérir un vocabulaire métier opérationnel.',
