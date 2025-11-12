@@ -1,0 +1,255 @@
+/* Optimisations mobiles globales pour Kassiopée Formation */
+
+/* Prévention du zoom sur iOS */
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="url"],
+input[type="password"],
+textarea,
+select {
+  font-size: 16px !important;
+}
+
+/* Touch targets minimum 44px */
+button,
+a,
+input,
+select,
+textarea {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Prévention du scroll horizontal */
+body {
+  overflow-x: hidden;
+}
+
+/* Images responsives par défaut */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Optimisations pour les cartes sur mobile */
+@media (max-width: 640px) {
+  .formation-card {
+    margin-bottom: 1rem;
+  }
+  
+  .formation-card img {
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .formation-card .card-content {
+    padding: 1rem;
+  }
+  
+  .formation-card .card-title {
+    font-size: 1.125rem;
+    line-height: 1.4;
+  }
+  
+  .formation-card .card-description {
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+}
+
+/* Optimisations pour les boutons CTA sur mobile */
+@media (max-width: 640px) {
+  .cta-button {
+    width: 100%;
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+    text-align: center;
+  }
+  
+  .cta-button-secondary {
+    margin-top: 0.75rem;
+  }
+}
+
+/* Optimisations pour les grilles sur mobile */
+@media (max-width: 768px) {
+  .mobile-grid-1 {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .mobile-grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+}
+
+/* Optimisations pour la typographie mobile */
+@media (max-width: 640px) {
+  .mobile-text-sm {
+    font-size: 0.875rem;
+  }
+  
+  .mobile-text-base {
+    font-size: 1rem;
+  }
+  
+  .mobile-text-lg {
+    font-size: 1.125rem;
+  }
+  
+  .mobile-text-xl {
+    font-size: 1.25rem;
+  }
+  
+  .mobile-text-2xl {
+    font-size: 1.5rem;
+  }
+  
+  .mobile-text-3xl {
+    font-size: 1.875rem;
+  }
+}
+
+/* Optimisations pour les espacements mobile */
+@media (max-width: 640px) {
+  .mobile-p-4 {
+    padding: 1rem;
+  }
+  
+  .mobile-py-8 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  
+  .mobile-py-12 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  
+  .mobile-mb-4 {
+    margin-bottom: 1rem;
+  }
+  
+  .mobile-mb-6 {
+    margin-bottom: 1.5rem;
+  }
+  
+  .mobile-mb-8 {
+    margin-bottom: 2rem;
+  }
+}
+
+/* Optimisations pour le Hero sur mobile */
+@media (max-width: 640px) {
+  .hero-mobile {
+    min-height: 100vh;
+    padding: 2rem 1rem;
+  }
+  
+  .hero-title-mobile {
+    font-size: 2.5rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-description-mobile {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+}
+
+/* Optimisations pour les formulaires mobile */
+@media (max-width: 640px) {
+  .form-mobile {
+    padding: 1rem;
+  }
+  
+  .form-input-mobile {
+    width: 100%;
+    padding: 0.875rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .form-button-mobile {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+}
+
+/* Optimisations pour les modales mobile */
+@media (max-width: 640px) {
+  .modal-mobile {
+    margin: 1rem;
+    max-height: calc(100vh - 2rem);
+    overflow-y: auto;
+  }
+  
+  .modal-content-mobile {
+    padding: 1.5rem;
+  }
+}
+
+/* Optimisations pour les tableaux mobile */
+@media (max-width: 768px) {
+  .table-mobile {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .table-mobile table {
+    min-width: 600px;
+  }
+  
+  .table-mobile th,
+  .table-mobile td {
+    padding: 0.5rem;
+    font-size: 0.875rem;
+  }
+}
+
+/* Animations optimisées pour mobile */
+@media (prefers-reduced-motion: no-preference) {
+  .animate-mobile {
+    animation-duration: 0.3s;
+    animation-timing-function: ease-out;
+  }
+}
+
+/* Désactivation des animations sur mobile lent */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Optimisations pour les performances mobile */
+.mobile-optimized {
+  will-change: auto;
+  transform: translateZ(0);
+}
+
+/* Optimisations pour le focus mobile */
+@media (max-width: 640px) {
+  .focus-mobile:focus {
+    outline: 2px solid #3B82F6;
+    outline-offset: 2px;
+  }
+}
