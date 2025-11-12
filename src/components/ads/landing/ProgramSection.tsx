@@ -54,10 +54,16 @@ const ProgramSection = () => {
   return (
     <section className="py-12 md:py-16 bg-gray-50">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Programme de la formation</h2>
-          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-            Un parcours complet sur 21 heures pour maîtriser tous les aspects du marketing digital
+        <div className="max-w-4xl mx-auto text-center mb-16">
+          <span className="inline-block bg-blue-100 text-blue-600 text-sm font-semibold px-4 py-1 rounded-full mb-3">
+            Programme détaillé
+          </span>
+          <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
+            Programme de la formation
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            En seulement 21 heures, vous maîtriserez :<br />
+            <span className="font-medium text-gray-800">Une formation intensive pour des résultats concrets et immédiats dans votre stratégie digitale</span>
           </p>
         </div>
 
@@ -105,6 +111,48 @@ const ProgramSection = () => {
               )}
             </div>
           ))}
+        </div>
+
+        {/* Section Ce qui est inclus */}
+        <div className="mt-20 max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <span className="inline-block bg-blue-100 text-blue-600 text-sm font-semibold px-4 py-1 rounded-full mb-4">
+              Vos avantages
+            </span>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
+              Ce qui est inclus dans votre formation
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Tous les outils et ressources nécessaires pour votre réussite
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              "Accès à la plateforme d'apprentissage en ligne",
+              "Support de cours complet (PDF)",
+              "Exercices pratiques et études de cas",
+              "Accès au groupe privé d'entraide",
+              "Support pédagogique pendant 3 mois",
+              "Attestation de formation",
+              "Préparation à la certification",
+              "Accès aux mises à jour du contenu"
+            ].map((item, index) => (
+              <div 
+                key={index}
+                className="bg-white p-6 rounded-xl border border-gray-100 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group"
+                data-aos="fade-up"
+                data-aos-delay={(index % 3) * 100}
+              >
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 h-10 w-10 rounded-xl bg-blue-50 flex items-center justify-center mr-4 group-hover:bg-blue-100 transition-colors">
+                    <CheckCircle className="h-5 w-5 text-blue-600" />
+                  </div>
+                  <span className="text-gray-800 font-medium">{item}</span>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
