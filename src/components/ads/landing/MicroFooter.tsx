@@ -48,14 +48,14 @@ const MicroFooter = () => {
             <h4 className="text-white font-medium mb-4">Contact</h4>
             <address className="not-italic">
               <p className="mb-2">
-                123 Avenue de la Formation<br />
-                75000 Paris, France
+                35 rue Armand Brette<br />
+                93380 Pierrefitte-sur-Seine
               </p>
               <p className="mb-2">
-                Tél : <a href="tel:+33123456789" className="hover:text-white">01 23 45 67 89</a>
+                Tél : <a href="tel:0743678768" className="hover:text-white">07 43 67 87 68</a>
               </p>
               <p>
-                Email : <a href="mailto:contact@kassiopee-formation.com" className="hover:text-white">contact@kassiopee-formation.com</a>
+                Email : <a href="mailto:formationkassiopee@gmail.com" className="hover:text-white">formationkassiopee@gmail.com</a>
               </p>
             </address>
           </div>
