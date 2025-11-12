@@ -86,6 +86,8 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  // Vérifier si nous sommes sur la page ADS
+  const isAdsPage = typeof window !== 'undefined' && window.location.pathname === '/ads';
   return (
     <html lang="fr" className={`${inter.variable} ${playfair.variable}`}>
       <head>
@@ -123,9 +125,11 @@ export default function RootLayout({
       </head>
       <body className="font-sans antialiased">
         <AdvancedAnalytics />
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        {!isAdsPage && <Header />}
+        <main className={isAdsPage ? 'min-h-screen' : ''}>
+          {children}
+        </main>
+        {!isAdsPage && <Footer />}
         <ChatBot />
         <PWAInstaller />
       </body>

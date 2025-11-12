@@ -21,15 +21,17 @@ const footerLinks = {
   ],
   company: [
     { name: 'À propos', href: '/a-propos' },
-    { name: 'Le Mag\' Kassiopée', href: '/actualites' },
-    { name: 'Nos résultats', href: '/nos-resultats' },
-    { name: 'Recrutement', href: '/recrutement' },
+    { name: 'Nos formations', href: '/formations' },
+    { name: 'Financements', href: '/financements' },
+    { name: 'Espace apprenant', href: '/espace-apprenant' },
+    { name: 'Actualités', href: '/actualites' },
     { name: 'Contact', href: '/contact' },
   ],
   legal: [
     { name: 'Mentions légales', href: '/mentions-legales' },
     { name: 'CGU', href: '/cgu' },
     { name: 'Politique de confidentialité', href: '/confidentialite' },
+    { name: 'Politique des cookies', href: '/politique-cookies' },
     { name: 'Plan du site', href: '/plan-du-site' },
   ],
 };
